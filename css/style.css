@@ -9,7 +9,7 @@
 /* --- CSS CUSTOM PROPERTIES (Design Tokens) --- */
 :root {
   /* Couleurs principales */
-  --primary-dark: #0a1628;
+  --primary-dark: #0d0d14;
   --primary: #1a3a5c;
   --primary-light: #2d6da4;
   --gold: #c8962e;
@@ -845,7 +845,7 @@ h4 { font-size: 1.25rem; }
 /* --- PAGE HEADER (inner pages) --- */
 .page-header {
   padding: 140px 0 60px;
-  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  background: linear-gradient(135deg, #0d0d14 0%, #1a1a25 60%, #2a2a35 100%);
   color: white;
   text-align: center;
 }
