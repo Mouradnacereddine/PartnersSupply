@@ -394,7 +394,7 @@ h4 { font-size: 1.25rem; }
 
 /* --- HERO SECTION — same background as page-header --- */
 .hero {
-  min-height: 80vh;
+  min-height: 55vh;
   display: flex;
   align-items: center;
   color: white;
@@ -416,14 +416,14 @@ h4 { font-size: 1.25rem; }
   color: white;
   margin-bottom: 0.5rem;
   font-weight: 800;
-  text-shadow: 0 2px 16px rgba(0,0,0,0.5);
+  text-shadow: 0 2px 20px rgba(0,0,0,0.6), 0 4px 40px rgba(0,0,0,0.3);
 }
 .hero .hero-subtitle {
   font-size: 1.25rem;
-  color: rgba(255,255,255,0.9);
+  color: rgba(255,255,255,0.95);
   margin-bottom: 0.5rem;
   font-weight: 300;
-  text-shadow: 0 1px 10px rgba(0,0,0,0.4);
+  text-shadow: 0 2px 20px rgba(0,0,0,0.8), 0 4px 30px rgba(0,0,0,0.5);
 }
 .hero .hero-tagline {
   font-size: 1.1rem;
@@ -440,8 +440,8 @@ h4 { font-size: 1.25rem; }
 .hero .hero-stats {
   display: flex;
   gap: 40px;
-  margin-top: 50px;
-  padding-top: 30px;
+  margin-top: 35px;
+  padding-top: 25px;
   border-top: 1px solid rgba(255,255,255,0.15);
 }
 .hero .hero-stat {
@@ -983,10 +983,11 @@ h4 { font-size: 1.25rem; }
   .header-mobile-btn { display: block; }
   .header .lang-switcher { display: none; }
   
-  .hero { min-height: 70vh; }
+  .hero { min-height: 60vh; }
   .hero h1 { font-size: 2.2rem; }
   .hero .hero-subtitle { font-size: 1rem; }
-  .hero .hero-stats { flex-wrap: wrap; gap: 20px; }
+  .hero .hero-stats { flex-wrap: wrap; gap: 20px; justify-content: center; }
+  .hero .hero-stat { flex: 0 0 calc(50% - 20px); }
   .hero .hero-stat-number { font-size: 1.5rem; }
   
   .section { padding: 50px 0; }
@@ -1015,6 +1016,10 @@ h4 { font-size: 1.25rem; }
   .pillar-icon { width: 48px; height: 48px; font-size: 1.3rem; }
   .hero .hero-actions { flex-direction: column; }
   .hero .hero-actions .btn { width: 100%; justify-content: center; }
+  .hero .hero-stats { gap: 12px; margin-top: 25px; padding-top: 18px; }
+  .hero .hero-stat { flex: 0 0 calc(50% - 12px); }
+  .hero .hero-stat-number { font-size: 1.3rem; }
+  .hero .hero-stat-label { font-size: 0.75rem; }
   .team-grid { grid-template-columns: 1fr; }
   .product-grid { grid-template-columns: 1fr; }
   .features-strip { grid-template-columns: 1fr; }
