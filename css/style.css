@@ -400,18 +400,21 @@ h4 { font-size: 1.25rem; }
   position: relative;
   overflow: hidden;
   padding: 72px 0 0;
-  min-height: 100vh;
+  min-height: max(100vh, calc(100vw * 1024 / 1536));
 
-  /* Image de fond : cover remplit toute la largeur (pas de barres) */
+  /* Image de fond : contain => entièrement visible (haut ET bas), pas rognée */
   background: #0d0d14;
-  background-image: url('../images/hero/hero-bg.png');
-  background-size: cover;
-  background-position: center 72px;
+  background-image:
+    /* Vignette latérale pour fondre les bords de l'image dans le fond sombre */
+    linear-gradient(to right, #0d0d14 0%, transparent 12%, transparent 88%, #0d0d14 100%),
+    url('../images/hero/hero-bg.png');
+  background-size: auto, contain;
+  background-position: center, center top;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-blend-mode: normal;
 }
 
-/* Overlay foncé pour lisibilité du texte sur l'image */
+/* Overlay foncé renforcé pour lisibilité du texte sur l'image */
 .hero::before {
   content: '';
   position: absolute;
@@ -421,9 +424,9 @@ h4 { font-size: 1.25rem; }
   height: calc(100% - 72px);
   background: linear-gradient(
     135deg,
-    rgba(0,0,0,0.55) 0%,
-    rgba(0,0,0,0.25) 50%,
-    rgba(0,0,0,0.55) 100%
+    rgba(0,0,0,0.65) 0%,
+    rgba(0,0,0,0.35) 50%,
+    rgba(0,0,0,0.65) 100%
   );
   z-index: 1;
   pointer-events: none;
@@ -458,17 +461,19 @@ h4 { font-size: 1.25rem; }
 }
 .hero .hero-subtitle {
   font-size: 1.2rem;
-  color: rgba(255,255,255,0.85);
+  color: white;
   margin-bottom: 0.5rem;
   font-weight: 400;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+  opacity: 0.95;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.6);
 }
 .hero .hero-desc {
   font-size: 1rem;
-  color: rgba(255,255,255,0.6);
+  color: white;
   margin-bottom: 2rem;
-  font-weight: 300;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+  font-weight: 400;
+  opacity: 0.9;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.5);
 }
 .hero .hero-actions {
   display: flex;
@@ -1039,7 +1044,7 @@ h4 { font-size: 1.25rem; }
   
   .hero h1 { font-size: 2.2rem; }
   .hero .hero-subtitle { font-size: 1rem; }
-  .hero { padding: 72px 0 0; min-height: 80vh; }
+  .hero { padding: 72px 0 0; min-height: max(80vh, calc(100vw * 1024 / 1536)); }
   
   .stats-bar-grid { flex-wrap: wrap; gap: 16px; }
   .stats-bar-item { flex: 0 0 calc(50% - 16px); padding: 10px 10px; }
@@ -1072,7 +1077,7 @@ h4 { font-size: 1.25rem; }
   .pillar-icon { width: 48px; height: 48px; font-size: 1.3rem; }
   .hero .hero-actions { flex-direction: column; }
   .hero .hero-actions .btn { width: 100%; justify-content: center; }
-  .hero { padding: 72px 0 0; min-height: 70vh; }
+  .hero { padding: 72px 0 0; min-height: max(70vh, calc(100vw * 1024 / 1536)); }
   
   .stats-bar-grid { gap: 12px; }
   .stats-bar-item { flex: 0 0 calc(50% - 12px); padding: 8px 8px; }
