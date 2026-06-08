@@ -110,7 +110,7 @@ ul { list-style: none; }
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.2;
-  color: var(--primary);
+  color: var(--text-dark);
 }
 h1 { font-size: 3rem; }
 h2 { font-size: 2.25rem; margin-bottom: 1rem; }
@@ -842,12 +842,41 @@ h4 { font-size: 1.25rem; }
   color: white;
 }
 
-/* --- PAGE HEADER (inner pages) --- */
+/* --- PAGE HEADER (inner pages) — exact same visual as Hero --- */
 .page-header {
+  position: relative;
   padding: 140px 0 60px;
-  background: linear-gradient(135deg, #0d0d14 0%, #1a1a25 60%, #2a2a35 100%);
+  overflow: hidden;
   color: white;
   text-align: center;
+  background: #0d0d14;
+}
+/* hero-bg.svg texture layer (same as .hero::before) */
+.page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../images/hero/hero-bg.svg') no-repeat center/cover;
+  opacity: 0.15;
+  z-index: 0;
+}
+/* Dark neutral overlay (exact same as .hero-overlay) */
+.page-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(10, 10, 15, 0.92) 0%, rgba(25, 25, 35, 0.75) 60%, rgba(40, 40, 50, 0.6) 100%);
+  z-index: 0;
+}
+.page-header > * {
+  position: relative;
+  z-index: 1;
 }
 .page-header h1 {
   color: white;
