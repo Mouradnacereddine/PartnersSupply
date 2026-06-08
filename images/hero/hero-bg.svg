@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="100%" height="100%">
   <defs>
-    <!-- Sky/Oceanic gradients -->
+    <!-- Dark neutral gradient -->
     <linearGradient id="skyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#07111e" />
-      <stop offset="60%" stop-color="#0f2239" />
-      <stop offset="100%" stop-color="#142c4b" />
+      <stop offset="0%" stop-color="#08080c" />
+      <stop offset="60%" stop-color="#12121a" />
+      <stop offset="100%" stop-color="#181820" />
     </linearGradient>
     <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#f3d078" />
