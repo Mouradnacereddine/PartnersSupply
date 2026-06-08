@@ -401,7 +401,7 @@ h4 { font-size: 1.25rem; }
   position: relative;
   overflow: hidden;
   padding-top: 80px;
-  background: url('../images/hero/page-header-bg.png') center/cover no-repeat;
+  background: #0d0d14 url('../images/hero/page-header-bg.png') center center / contain no-repeat;
 }
 
 /* No carousel, no overlay, no hero-bg.svg — single image background */
@@ -426,7 +426,6 @@ h4 { font-size: 1.25rem; }
 .hero .hero-tagline {
   font-size: 1.1rem;
   color: var(--gold-light);
-  margin-top: 4rem;
   margin-bottom: 2rem;
   font-family: var(--font-display);
   letter-spacing: 2px;
@@ -807,7 +806,7 @@ h4 { font-size: 1.25rem; }
   overflow: hidden;
   color: white;
   text-align: center;
-  background: url('../images/hero/page-header-bg.png') center/cover no-repeat;
+  background: #0d0d14 url('../images/hero/page-header-bg.png') center center / contain no-repeat;
 }
 /* Pas de ::before ni ::after — l'image fait tout */
 .page-header h1 {
