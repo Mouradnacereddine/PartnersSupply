@@ -426,6 +426,7 @@ h4 { font-size: 1.25rem; }
 .hero .hero-tagline {
   font-size: 1.1rem;
   color: var(--gold-light);
+  margin-top: 4rem;
   margin-bottom: 2rem;
   font-family: var(--font-display);
   letter-spacing: 2px;
