@@ -842,42 +842,16 @@ h4 { font-size: 1.25rem; }
   color: white;
 }
 
-/* --- PAGE HEADER (inner pages) — exact same visual as Hero --- */
+/* --- PAGE HEADER (inner pages) — image de fond unique --- */
 .page-header {
   position: relative;
   padding: 140px 0 60px;
   overflow: hidden;
   color: white;
   text-align: center;
-  background: #0d0d14;
+  background: linear-gradient(rgba(10,10,15,0.78), rgba(10,10,15,0.78)), url('../images/hero/page-header-bg.png') center/cover no-repeat;
 }
-/* hero-bg.svg texture layer (same as .hero::before) */
-.page-header::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('../images/hero/hero-bg.svg') no-repeat center/cover;
-  opacity: 0.15;
-  z-index: 0;
-}
-/* Dark neutral overlay (exact same as .hero-overlay) */
-.page-header::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(10, 10, 15, 0.92) 0%, rgba(25, 25, 35, 0.75) 60%, rgba(40, 40, 50, 0.6) 100%);
-  z-index: 0;
-}
-.page-header > * {
-  position: relative;
-  z-index: 1;
-}
+/* Pas de ::before ni ::after — l'image fait tout */
 .page-header h1 {
   color: white;
   margin-bottom: 8px;
