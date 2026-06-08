@@ -399,14 +399,35 @@ h4 { font-size: 1.25rem; }
   color: white;
   position: relative;
   overflow: hidden;
-  padding: 100px 0;
+  padding: 72px 0 0;
+  min-height: 100vh;
+
+  /* Image de fond : entièrement visible (contain = pas rognée) */
   background: #0d0d14;
+  background-image: url('../images/hero/hero-bg.png');
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Gradient de transition vers le contenu en dessous */
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to top, #0d0d14 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 1;
 }
 
 .hero-content {
   max-width: 650px;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 .hero h1 {
   font-size: 3.5rem;
@@ -995,7 +1016,7 @@ h4 { font-size: 1.25rem; }
   
   .hero h1 { font-size: 2.2rem; }
   .hero .hero-subtitle { font-size: 1rem; }
-  .hero { padding: 70px 0; }
+  .hero { padding: 72px 0 0; min-height: 80vh; }
   
   .stats-bar-grid { flex-wrap: wrap; gap: 16px; }
   .stats-bar-item { flex: 0 0 calc(50% - 16px); padding: 10px 10px; }
@@ -1028,7 +1049,7 @@ h4 { font-size: 1.25rem; }
   .pillar-icon { width: 48px; height: 48px; font-size: 1.3rem; }
   .hero .hero-actions { flex-direction: column; }
   .hero .hero-actions .btn { width: 100%; justify-content: center; }
-  .hero { padding: 50px 0; }
+  .hero { padding: 72px 0 0; min-height: 70vh; }
   
   .stats-bar-grid { gap: 12px; }
   .stats-bar-item { flex: 0 0 calc(50% - 12px); padding: 8px 8px; }
