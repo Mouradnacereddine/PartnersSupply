@@ -409,7 +409,7 @@ h4 { font-size: 1.25rem; }
     linear-gradient(to right, #0d0d14 0%, transparent 12%, transparent 88%, #0d0d14 100%),
     url('../images/hero/hero-bg.png');
   background-size: auto, contain;
-  background-position: center, center top;
+  background-position: center, center 72px;
   background-repeat: no-repeat;
   background-blend-mode: normal;
 }
