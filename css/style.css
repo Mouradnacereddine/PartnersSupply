@@ -401,7 +401,7 @@ h4 { font-size: 1.25rem; }
   position: relative;
   overflow: hidden;
   padding-top: 80px;
-  background: #0d0d14 url('../images/hero/page-header-bg.png') center center / contain no-repeat;
+  background: #0d0d14 linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('../images/hero/page-header-bg.png') center center / cover no-repeat;
 }
 
 /* No carousel, no overlay, no hero-bg.svg — single image background */
@@ -416,12 +416,14 @@ h4 { font-size: 1.25rem; }
   color: white;
   margin-bottom: 0.5rem;
   font-weight: 800;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.5);
 }
 .hero .hero-subtitle {
   font-size: 1.25rem;
-  color: rgba(255,255,255,0.8);
+  color: rgba(255,255,255,0.85);
   margin-bottom: 0.5rem;
   font-weight: 300;
+  text-shadow: 0 1px 10px rgba(0,0,0,0.5);
 }
 .hero .hero-tagline {
   font-size: 1.1rem;
@@ -429,6 +431,7 @@ h4 { font-size: 1.25rem; }
   margin-bottom: 2rem;
   font-family: var(--font-display);
   letter-spacing: 2px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.6);
 }
 .hero .hero-actions {
   display: flex;
@@ -806,12 +809,13 @@ h4 { font-size: 1.25rem; }
   overflow: hidden;
   color: white;
   text-align: center;
-  background: #0d0d14 url('../images/hero/page-header-bg.png') center center / contain no-repeat;
+  background: #0d0d14 linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('../images/hero/page-header-bg.png') center center / cover no-repeat;
 }
 /* Pas de ::before ni ::after — l'image fait tout */
 .page-header h1 {
   color: white;
   margin-bottom: 8px;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.5);
 }
 .page-header p {
   color: rgba(255,255,255,0.7);
