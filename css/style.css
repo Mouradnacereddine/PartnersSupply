@@ -401,10 +401,20 @@ h4 { font-size: 1.25rem; }
   position: relative;
   overflow: hidden;
   padding-top: 80px;
-  background: #0d0d14 url('../images/hero/page-header-bg.png') center center / cover no-repeat;
+  background: #0d0d14; /* fallback si la vidéo ne charge pas */
 }
 
-/* No carousel, no overlay, no hero-bg.svg — single image background */
+/* Vidéo de fond pleine largeur */
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+  z-index: 0;
+}
 
 .hero-content {
   max-width: 680px;
