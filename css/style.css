@@ -412,26 +412,14 @@ h4 { font-size: 1.25rem; }
   padding: 72px 0 0;
   min-height: max(100vh, calc(100vw * 1024 / 1536));
   background: #0d0d14;
-  transform: translateZ(0); /* permet à overflow:hidden de clipper les enfants fixed */
-}
-
-/* Arrière-plan fixe avec parallaxe : l'image reste en place pendant le défilement */
-.hero-bg {
-  position: fixed;
-  top: 72px;
-  left: 0;
-  width: 100%;
-  height: calc(100% - 72px);
-  z-index: 0;
-  pointer-events: none;
-  background: #0d0d14;
   background-image:
     /* Vignette latérale pour fondre les bords de l'image dans le fond sombre */
     linear-gradient(to right, #0d0d14 0%, transparent 12%, transparent 88%, #0d0d14 100%),
     url('../images/hero/hero-bg.png');
   background-size: auto, contain;
-  background-position: center, center;
+  background-position: center, center 72px;
   background-repeat: no-repeat;
+  background-attachment: scroll, fixed;
   animation: hero-zoom 25s ease-in-out infinite alternate;
 }
 
@@ -485,18 +473,18 @@ h4 { font-size: 1.25rem; }
 }
 .hero .hero-subtitle {
   font-size: 1.2rem;
-  color: white;
+  color: var(--gold);
   margin-bottom: 0.5rem;
-  font-weight: 400;
-  opacity: 0.95;
+  font-weight: 500;
+  opacity: 1;
   text-shadow: 0 1px 6px rgba(0,0,0,0.6);
 }
 .hero .hero-desc {
   font-size: 1rem;
-  color: white;
+  color: var(--gold);
   margin-bottom: 2rem;
   font-weight: 400;
-  opacity: 0.9;
+  opacity: 1;
   text-shadow: 0 1px 6px rgba(0,0,0,0.5);
 }
 .hero .hero-actions {
