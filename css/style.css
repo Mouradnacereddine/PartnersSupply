@@ -392,7 +392,7 @@ h4 { font-size: 1.25rem; }
   margin-left: 0;
 }
 
-/* --- HERO SECTION --- */
+/* --- HERO SECTION — same background as page-header --- */
 .hero {
   min-height: 80vh;
   display: flex;
@@ -401,53 +401,10 @@ h4 { font-size: 1.25rem; }
   position: relative;
   overflow: hidden;
   padding-top: 80px;
+  background: linear-gradient(rgba(10,10,15,0.78), rgba(10,10,15,0.78)), url('../images/hero/page-header-bg.png') center/cover no-repeat;
 }
 
-/* Background Carousel */
-.hero-carousel {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
-.carousel-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  transition: opacity 1.5s ease-in-out;
-}
-.carousel-slide.active {
-  opacity: 0.28; /* Opacity of images for contrast with text */
-}
-
-/* Dark neutral overlay on Hero (removed blue) */
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(10, 10, 15, 0.92) 0%, rgba(25, 25, 35, 0.75) 60%, rgba(40, 40, 50, 0.6) 100%);
-  z-index: 0;
-}
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('../images/hero/hero-bg.svg') no-repeat center/cover;
-  opacity: 0.15;
-  z-index: 0;
-}
+/* No carousel, no overlay, no hero-bg.svg — single image background */
 
 .hero-content {
   max-width: 680px;
