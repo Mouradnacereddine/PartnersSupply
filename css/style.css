@@ -402,13 +402,31 @@ h4 { font-size: 1.25rem; }
   padding: 72px 0 0;
   min-height: 100vh;
 
-  /* Image de fond : entièrement visible (contain = pas rognée) */
+  /* Image de fond : cover remplit toute la largeur (pas de barres) */
   background: #0d0d14;
   background-image: url('../images/hero/hero-bg.png');
-  background-size: contain;
-  background-position: center center;
+  background-size: cover;
+  background-position: center 72px;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+/* Overlay foncé pour lisibilité du texte sur l'image */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 72px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 72px);
+  background: linear-gradient(
+    135deg,
+    rgba(0,0,0,0.55) 0%,
+    rgba(0,0,0,0.25) 50%,
+    rgba(0,0,0,0.55) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
 }
 
 /* Gradient de transition vers le contenu en dessous */
@@ -434,18 +452,23 @@ h4 { font-size: 1.25rem; }
   color: white;
   margin-bottom: 0.75rem;
   font-weight: 800;
+  text-shadow:
+    0 2px 8px rgba(0,0,0,0.6),
+    0 4px 20px rgba(0,0,0,0.4);
 }
 .hero .hero-subtitle {
   font-size: 1.2rem;
   color: rgba(255,255,255,0.85);
   margin-bottom: 0.5rem;
   font-weight: 400;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
 }
 .hero .hero-desc {
   font-size: 1rem;
   color: rgba(255,255,255,0.6);
   margin-bottom: 2rem;
   font-weight: 300;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.4);
 }
 .hero .hero-actions {
   display: flex;
