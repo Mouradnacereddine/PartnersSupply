@@ -399,60 +399,73 @@ h4 { font-size: 1.25rem; }
   color: white;
   position: relative;
   overflow: hidden;
-  padding: 80px 0;
+  padding: 100px 0;
   background: #0d0d14;
 }
 
 .hero-content {
-  max-width: 680px;
+  max-width: 650px;
   position: relative;
   z-index: 1;
 }
 .hero h1 {
   font-size: 3.5rem;
   color: white;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
   font-weight: 800;
-  text-shadow: 0 2px 20px rgba(0,0,0,0.6), 0 4px 40px rgba(0,0,0,0.3);
 }
 .hero .hero-subtitle {
-  font-size: 1.25rem;
-  color: rgba(255,255,255,0.95);
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.85);
   margin-bottom: 0.5rem;
-  font-weight: 300;
-  text-shadow: 0 2px 20px rgba(0,0,0,0.8), 0 4px 30px rgba(0,0,0,0.5);
+  font-weight: 400;
 }
-.hero .hero-tagline {
-  font-size: 1.1rem;
-  color: var(--gold-light);
+.hero .hero-desc {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.6);
   margin-bottom: 2rem;
-  font-family: var(--font-display);
-  letter-spacing: 2px;
+  font-weight: 300;
 }
 .hero .hero-actions {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
 }
-.hero .hero-stats {
+
+/* --- STATS BAR (séparée du hero) --- */
+.stats-bar {
+  background: #f4f4f4;
+  padding: 28px 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+.stats-bar-grid {
   display: flex;
-  gap: 40px;
-  margin-top: 35px;
-  padding-top: 25px;
-  border-top: 1px solid rgba(255,255,255,0.15);
+  align-items: center;
+  justify-content: space-around;
+  gap: 0;
 }
-.hero .hero-stat {
+.stats-bar-item {
+  flex: 1;
   text-align: center;
+  padding: 0 20px;
 }
-.hero .hero-stat-number {
+.stats-bar-number {
   font-size: 2rem;
   font-weight: 800;
-  color: var(--gold);
+  color: #17212e;
+  line-height: 1.2;
 }
-.hero .hero-stat-label {
+.stats-bar-label {
   font-size: 0.85rem;
-  color: rgba(255,255,255,0.7);
+  color: #6b7280;
   margin-top: 4px;
+  font-weight: 400;
+}
+.stats-bar-divider {
+  color: #c8962e;
+  font-size: 0.4rem;
+  opacity: 0.6;
+  flex-shrink: 0;
 }
 
 /* --- CARDS (general) --- */
@@ -983,9 +996,12 @@ h4 { font-size: 1.25rem; }
   .hero { min-height: 0; }
   .hero h1 { font-size: 2.2rem; }
   .hero .hero-subtitle { font-size: 1rem; }
-  .hero .hero-stats { flex-wrap: wrap; gap: 20px; justify-content: center; }
-  .hero .hero-stat { flex: 0 0 calc(50% - 20px); }
-  .hero .hero-stat-number { font-size: 1.5rem; }
+  .hero { padding: 70px 0; }
+  
+  .stats-bar-grid { flex-wrap: wrap; gap: 16px; }
+  .stats-bar-item { flex: 0 0 calc(50% - 16px); padding: 10px 10px; }
+  .stats-bar-divider { display: none; }
+  .stats-bar-number { font-size: 1.6rem; }
   
   .section { padding: 50px 0; }
   h1 { font-size: 2rem; }
@@ -1013,10 +1029,12 @@ h4 { font-size: 1.25rem; }
   .pillar-icon { width: 48px; height: 48px; font-size: 1.3rem; }
   .hero .hero-actions { flex-direction: column; }
   .hero .hero-actions .btn { width: 100%; justify-content: center; }
-  .hero .hero-stats { gap: 12px; margin-top: 25px; padding-top: 18px; }
-  .hero .hero-stat { flex: 0 0 calc(50% - 12px); }
-  .hero .hero-stat-number { font-size: 1.3rem; }
-  .hero .hero-stat-label { font-size: 0.75rem; }
+  .hero { padding: 50px 0; }
+  
+  .stats-bar-grid { gap: 12px; }
+  .stats-bar-item { flex: 0 0 calc(50% - 12px); padding: 8px 8px; }
+  .stats-bar-number { font-size: 1.3rem; }
+  .stats-bar-label { font-size: 0.75rem; }
   .team-grid { grid-template-columns: 1fr; }
   .product-grid { grid-template-columns: 1fr; }
   .features-strip { grid-template-columns: 1fr; }
