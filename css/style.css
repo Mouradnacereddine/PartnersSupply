@@ -394,7 +394,6 @@ h4 { font-size: 1.25rem; }
 
 /* --- HERO SECTION — same background as page-header --- */
 .hero {
-  min-height: 65vh;
   display: flex;
   align-items: center;
   color: white;
@@ -404,13 +403,13 @@ h4 { font-size: 1.25rem; }
   background: #0d0d14; /* fallback si la vidéo ne charge pas */
 }
 
-/* Vidéo de fond pleine largeur */
+/* Vidéo de fond — commence sous la barre header (72px) */
 .hero-video {
   position: absolute;
-  top: 0;
+  top: 72px;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: calc(100% - 72px);
   object-fit: cover;
   object-position: center bottom;
   z-index: 0;
@@ -993,7 +992,7 @@ h4 { font-size: 1.25rem; }
   .header-mobile-btn { display: block; }
   .header .lang-switcher { display: none; }
   
-  .hero { min-height: 60vh; }
+  .hero { min-height: 0; }
   .hero h1 { font-size: 2.2rem; }
   .hero .hero-subtitle { font-size: 1rem; }
   .hero .hero-stats { flex-wrap: wrap; gap: 20px; justify-content: center; }
