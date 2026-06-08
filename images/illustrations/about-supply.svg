@@ -1,85 +1,228 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
-  <!-- Background gradient -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 620" width="100%" height="100%">
   <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0a1628" />
-      <stop offset="100%" stop-color="#1a3a5c" />
-    </linearGradient>
+    <!-- Globe gradient: deep ocean -->
+    <radialGradient id="oceanGrad" cx="45%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#1a3a6b" />
+      <stop offset="60%" stop-color="#0f2240" />
+      <stop offset="100%" stop-color="#071228" />
+    </radialGradient>
+    <!-- Gold gradient for highlights -->
     <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#e8c45a" />
-      <stop offset="100%" stop-color="#c8962e" />
+      <stop offset="0%" stop-color="#f0d060" />
+      <stop offset="50%" stop-color="#d4a830" />
+      <stop offset="100%" stop-color="#b88920" />
     </linearGradient>
-    <pattern id="gridPattern" width="30" height="30" patternUnits="userSpaceOnUse">
-      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
-    </pattern>
+    <!-- Glow filter for nodes -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Soft shadow for continents -->
+    <filter id="continentShadow">
+      <feDropShadow dx="1" dy="1" stdDeviation="2" flood-color="rgba(0,0,0,0.4)"/>
+    </filter>
+    <!-- Pulse animation for hub -->
+    <style>
+      @keyframes pulse { 0%,100%{opacity:0.3;transform:scale(1)} 50%{opacity:0.8;transform:scale(1.8)} }
+      @keyframes dotPulse { 0%,100%{opacity:0.6} 50%{opacity:1} }
+      .pulse-ring{animation:pulse 3s ease-in-out infinite;transform-origin:center}
+      .trade-route{stroke-dasharray:6,4;animation:dashMove 2s linear infinite}
+      @keyframes dashMove { to {stroke-dashoffset:-20} }
+      .dot-blink{animation:dotPulse 2s ease-in-out infinite}
+    </style>
   </defs>
 
-  <rect width="800" height="600" fill="url(#bgGrad)"/>
-  <rect width="800" height="600" fill="url(#gridPattern)"/>
+  <!-- Background: dark blue gradient -->
+  <rect width="800" height="620" fill="#0a1628"/>
 
-  <!-- World Map Silhouette (Abstract) -->
-  <g fill="rgba(255, 255, 255, 0.05)">
-    <!-- North America -->
-    <path d="M 100 150 Q 150 130 200 180 T 250 200 T 220 280 T 150 300 Z" />
+  <!-- Globe circle (projection) -->
+  <circle cx="400" cy="315" r="265" fill="url(#oceanGrad)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+  <!-- Latitude / Longitude grid -->
+  <g stroke="rgba(255,255,255,0.06)" stroke-width="0.8" fill="none">
+    <!-- Horizontal (latitudes) -->
+    <ellipse cx="400" cy="190" rx="240" ry="40"/>
+    <ellipse cx="400" cy="250" rx="260" ry="50"/>
+    <ellipse cx="400" cy="315" rx="265" ry="60"/>
+    <ellipse cx="400" cy="380" rx="260" ry="50"/>
+    <ellipse cx="400" cy="440" rx="240" ry="40"/>
+    <!-- Vertical (longitudes) -->
+    <ellipse cx="400" cy="315" rx="55" ry="265"/>
+    <ellipse cx="400" cy="315" rx="120" ry="265"/>
+    <ellipse cx="400" cy="315" rx="190" ry="265"/>
+    <ellipse cx="400" cy="315" rx="240" ry="265"/>
+  </g>
+
+  <!-- Outer glow ring -->
+  <circle cx="400" cy="315" r="275" fill="none" stroke="rgba(232,196,90,0.12)" stroke-width="2"/>
+
+  <!-- ===== CONTINENTS (more realistic shapes) ===== -->
+  <g fill="#2a5a3c" stroke="rgba(100,200,100,0.2)" stroke-width="0.8" filter="url(#continentShadow)">
+
+    <!-- NORTH AMERICA -->
+    <path d="M210 170 L230 160 L260 165 L280 155 L290 160 L295 170 
+             L310 180 L315 195 L310 210 L300 225 L285 235 L270 240 
+             L255 245 L240 250 L225 255 L210 260 L200 255 L195 245 
+             L190 235 L185 220 L188 210 L195 198 L205 185 Z" />
+    <!-- Greenland -->
+    <path d="M305 145 L320 140 L335 145 L340 158 L330 168 L315 165 L305 155 Z" />
+    <!-- Central America -->
+    <path d="M215 265 L225 268 L235 275 L240 285 L235 295 L225 298 L218 290 L212 278 Z" />
+
+    <!-- SOUTH AMERICA -->
+    <path d="M235 305 L250 300 L265 305 L275 315 L280 330 
+             L282 350 L278 370 L270 390 L258 410 L245 425 
+             L235 430 L228 420 L225 405 L222 385 L220 365 
+             L218 345 L220 325 L225 312 Z" />
+
+    <!-- EUROPE -->
+    <path d="M395 165 L410 160 L425 165 L435 172 L440 182 
+             L438 195 L430 205 L420 210 L408 215 L398 218 
+             L390 215 L385 205 L380 195 L382 185 L388 175 Z" />
+
+    <!-- AFRICA -->
+    <path d="M405 225 L420 220 L435 225 L445 240 L448 260 
+             L445 285 L438 310 L428 335 L420 355 L410 368 
+             L400 370 L392 358 L385 340 L380 320 L378 300 
+             L380 278 L385 258 L392 240 L398 228 Z" />
+    <!-- Madagascar -->
+    <path d="M455 325 L462 330 L465 345 L460 358 L452 352 L448 338 Z" />
+
+    <!-- ASIA -->
+    <path d="M445 160 L465 155 L490 158 L515 162 L540 168 
+             L560 175 L575 185 L585 195 L590 210 L585 225 
+             L575 240 L560 250 L540 255 L520 258 L500 260 
+             L480 258 L460 255 L445 248 L440 235 L438 218 
+             L440 200 L442 185 L442 170 Z" />
+    <!-- India -->
+    <path d="M515 260 L525 258 L535 265 L540 280 L538 300 
+             L530 315 L520 320 L512 310 L508 290 L510 272 Z" />
+    <!-- Southeast Asia / Indonesia -->
+    <path d="M555 270 L570 275 L578 285 L575 295 L565 300 L555 295 L548 285 Z" />
+    <!-- Japan -->
+    <path d="M595 190 L600 185 L608 190 L610 205 L605 218 L598 215 L594 202 Z" />
+
+    <!-- AUSTRALIA -->
+    <path d="M600 355 L620 348 L640 352 L655 362 L658 378 
+             L652 395 L640 408 L625 412 L608 408 L595 400 
+             L588 385 L590 368 Z" />
+    <!-- New Zealand -->
+    <path d="M670 418 L678 420 L682 432 L678 442 L670 438 L665 428 Z" />
+
+  </g>
+
+  <!-- ===== Sub-continent highlighting (brighter green) ===== -->
+  <g fill="#3a7a4e" opacity="0.3">
+    <!-- Europe brighter -->
+    <path d="M400 170 L415 165 L430 170 L435 180 L432 192 L425 202 L415 207 L405 210 L395 206 L390 198 L388 188 L392 178 Z" />
+    <!-- Middle East -->
+    <path d="M485 225 L498 222 L510 228 L515 245 L512 260 L505 268 L495 265 L488 255 L485 240 Z" />
+  </g>
+
+  <!-- ===== TRADE ROUTES (dashed gold lines) ===== -->
+  <g fill="none" stroke="url(#goldGrad)" stroke-width="1.8" class="trade-route" opacity="0.6">
+    <!-- Paris (410,195) to Algeria (415,240) -->
+    <path d="M410 195 Q412 215 415 240" />
+    <!-- Paris to West Africa (385,310) -->
+    <path d="M410 195 Q395 250 385 310" />
+    <!-- Paris to Central Africa (425,340) -->
+    <path d="M410 195 Q415 270 425 340" />
+    <!-- Paris to Middle East (500,235) -->
+    <path d="M410 195 Q455 210 500 235" />
+    <!-- Paris to Asia (540,220) -->
+    <path d="M410 195 Q470 190 540 220" />
+    <!-- Paris to Shanghai (575,240) -->
+    <path d="M410 195 Q490 200 575 240" />
+    <!-- Paris to South America (255,350) -->
+    <path d="M410 195 Q330 270 255 350" />
+    <!-- Paris to North America (260,195) -->
+    <path d="M410 195 Q335 185 260 195" />
+    <!-- Africa to Middle East -->
+    <path d="M440 280 Q470 262 500 240" />
+  </g>
+
+  <!-- ===== HUBS (glowing dots) ===== -->
+  <!-- Paris HQ -->
+  <g filter="url(#glow)">
+    <circle cx="410" cy="195" r="9" fill="url(#goldGrad)" />
+    <circle cx="410" cy="195" r="18" fill="none" stroke="rgba(240,208,96,0.4)" stroke-width="2" class="pulse-ring" />
+  </g>
+
+  <!-- Secondary hubs -->
+  <g filter="url(#glow)">
+    <!-- Algeria -->
+    <circle cx="415" cy="240" r="4" fill="#f0d060" />
+    <!-- West Africa -->
+    <circle cx="385" cy="310" r="4" fill="#f0d060" />
+    <!-- Central Africa -->
+    <circle cx="425" cy="340" r="4" fill="#f0d060" />
+    <!-- Middle East -->
+    <circle cx="500" cy="235" r="5" fill="#f0d060" />
+    <!-- Asia -->
+    <circle cx="575" cy="240" r="5" fill="#f0d060" />
+    <!-- Shanghai -->
+    <circle cx="580" cy="245" r="4" fill="#f0d060" />
     <!-- South America -->
-    <path d="M 220 320 Q 250 380 280 440 T 240 520 T 200 450 Z" />
-    <!-- Eurasia & Africa -->
-    <path d="M 400 150 Q 500 100 650 150 T 750 200 T 700 350 T 550 380 T 450 300 Z" />
-    <path d="M 450 310 Q 520 350 550 420 T 500 530 T 420 400 Z" />
+    <circle cx="255" cy="350" r="4" fill="#f0d060" />
+    <!-- North America -->
+    <circle cx="260" cy="195" r="4" fill="#f0d060" />
   </g>
 
-  <!-- Connection lines representing trade routes -->
-  <g stroke="rgba(200, 150, 46, 0.4)" stroke-width="2" fill="none" stroke-dasharray="8,4">
-    <!-- Paris (approx 460, 200) to Algiers (approx 460, 280) -->
-    <path d="M 460 200 Q 450 240 460 280" />
-    <!-- Paris to West Africa (approx 400, 380) -->
-    <path d="M 460 200 Q 420 290 400 380" />
-    <!-- Paris to Gulf (approx 560, 290) -->
-    <path d="M 460 200 Q 510 245 560 290" />
-    <!-- Paris to China (approx 680, 240) -->
-    <path d="M 460 200 Q 570 200 680 240" />
+  <!-- ===== REGION LABELS ===== -->
+  <text x="432" y="190" fill="#f0d060" font-family="Arial,sans-serif" font-size="12" font-weight="bold">PARIS (SIÈGE)</text>
+  <text x="397" y="382" fill="rgba(255,255,255,0.4)" font-family="Arial,sans-serif" font-size="11" text-anchor="end">AFRIQUE</text>
+  <text x="505" y="255" fill="rgba(255,255,255,0.4)" font-family="Arial,sans-serif" font-size="11">MOYEN-ORIENT</text>
+  <text x="590" y="260" fill="rgba(255,255,255,0.4)" font-family="Arial,sans-serif" font-size="11">ASIE</text>
+  <text x="302" y="170" fill="rgba(255,255,255,0.3)" font-family="Arial,sans-serif" font-size="10" text-anchor="end">AMÉRIQUE DU NORD</text>
+  <text x="247" y="380" fill="rgba(255,255,255,0.3)" font-family="Arial,sans-serif" font-size="10" text-anchor="end">AMÉRIQUE DU SUD</text>
+  <text x="638" y="430" fill="rgba(255,255,255,0.3)" font-family="Arial,sans-serif" font-size="10" text-anchor="end">OCÉANIE</text>
+
+  <!-- ===== KEY SECTORS icons at bottom ===== -->
+  <!-- Auto / Stellantis -->
+  <g transform="translate(80, 530)">
+    <rect x="0" y="0" width="50" height="50" rx="10" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)"/>
+    <text x="25" y="22" text-anchor="middle" fill="#f0d060" font-family="Arial,sans-serif" font-size="18">🚗</text>
+    <text x="25" y="40" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-family="Arial,sans-serif" font-size="9">Automobile</text>
   </g>
 
-  <!-- Nodes (Glowing dots) -->
-  <g>
-    <!-- Paris (Center of Operations) -->
-    <circle cx="460" cy="200" r="8" fill="url(#goldGrad)" />
-    <circle cx="460" cy="200" r="16" fill="none" stroke="rgba(232, 196, 90, 0.5)" stroke-width="1.5">
-      <animate attributeName="r" values="8;24;8" dur="3s" repeatCount="indefinite" />
-    </circle>
-    
-    <!-- Other hubs -->
-    <circle cx="460" cy="280" r="5" fill="#fff" opacity="0.9" />
-    <circle cx="400" cy="380" r="5" fill="#fff" opacity="0.9" />
-    <circle cx="560" cy="290" r="5" fill="#fff" opacity="0.9" />
-    <circle cx="680" cy="240" r="6" fill="url(#goldGrad)" />
+  <!-- Mining -->
+  <g transform="translate(165, 530)">
+    <rect x="0" y="0" width="50" height="50" rx="10" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)"/>
+    <text x="25" y="22" text-anchor="middle" fill="#f0d060" font-family="Arial,sans-serif" font-size="18">⛏️</text>
+    <text x="25" y="40" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-family="Arial,sans-serif" font-size="9">Mining</text>
   </g>
 
-  <!-- Text / Info overlays -->
-  <text x="480" y="195" fill="#e8c45a" font-family="sans-serif" font-size="12" font-weight="bold">PARIS (HQ)</text>
-  <text x="480" y="210" fill="#fff" font-family="sans-serif" font-size="10" opacity="0.7">Bureau d'achats principal</text>
-  
-  <text x="580" y="295" fill="#fff" font-family="sans-serif" font-size="10" font-weight="bold">MOYEN-ORIENT</text>
-  <text x="310" y="385" fill="#fff" font-family="sans-serif" font-size="10" font-weight="bold">AFRIQUE</text>
-  <text x="698" y="245" fill="#e8c45a" font-family="sans-serif" font-size="10" font-weight="bold">ASIE</text>
-
-  <!-- Abstract icons overlay to symbolize sectors -->
-  <!-- Box (Logistics) at bottom left -->
-  <g transform="translate(60, 450)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" fill="none">
-    <rect x="0" y="0" width="60" height="60" rx="8" />
-    <path d="M 15 25 L 30 15 L 45 25 L 30 35 Z" stroke="url(#goldGrad)" />
-    <path d="M 15 25 L 15 45 L 30 52 L 30 35" />
-    <path d="M 45 25 L 45 45 L 30 52" />
+  <!-- Oil & Gas -->
+  <g transform="translate(250, 530)">
+    <rect x="0" y="0" width="50" height="50" rx="10" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)"/>
+    <text x="25" y="22" text-anchor="middle" fill="#f0d060" font-family="Arial,sans-serif" font-size="18">🛢️</text>
+    <text x="25" y="40" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-family="Arial,sans-serif" font-size="9">Oil &amp; Gas</text>
   </g>
-  <text x="130" y="475" fill="#fff" font-family="sans-serif" font-size="12" font-weight="bold">Logistique Intégrée</text>
-  <text x="130" y="495" fill="#64748b" font-family="sans-serif" font-size="10">Groupage &amp; Consolidation</text>
 
-  <!-- Shield (Quality) at bottom right -->
-  <g transform="translate(540, 450)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" fill="none">
-    <rect x="0" y="0" width="60" height="60" rx="8" />
-    <path d="M 30 15 C 30 15 45 18 45 28 C 45 38 35 48 30 51 C 25 48 15 38 15 28 C 15 18 30 15 30 15 Z" stroke="url(#goldGrad)" />
-    <path d="M 23 30 L 28 35 L 37 25" stroke="#fff" />
+  <!-- Logistics -->
+  <g transform="translate(395, 530)">
+    <rect x="0" y="0" width="50" height="50" rx="10" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)"/>
+    <rect x="10" y="12" width="30" height="20" rx="3" fill="none" stroke="#f0d060" stroke-width="1.5"/>
+    <path d="M15 22 L25 14 L35 22" fill="none" stroke="#f0d060" stroke-width="1.5"/>
+    <path d="M15 22 L15 32 L25 38 L35 32 L35 22" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+    <text x="25" y="46" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-family="Arial,sans-serif" font-size="9">Logistique</text>
   </g>
-  <text x="615" y="475" fill="#fff" font-family="sans-serif" font-size="12" font-weight="bold">Conformité &amp; Qualité</text>
-  <text x="615" y="495" fill="#64748b" font-family="sans-serif" font-size="10">Contrôle SGS, Cotecna, Veritas</text>
+
+  <!-- Quality -->
+  <g transform="translate(540, 530)">
+    <rect x="0" y="0" width="50" height="50" rx="10" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)"/>
+    <path d="M25 12 C25 12 40 16 40 26 C40 36 30 46 25 48 C20 46 10 36 10 26 C10 16 25 12 25 12 Z" fill="none" stroke="#f0d060" stroke-width="1.5"/>
+    <path d="M18 28 L23 33 L32 22" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+    <text x="25" y="46" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-family="Arial,sans-serif" font-size="9">Qualité</text>
+  </g>
+
+  <!-- Badge: Since 2006 -->
+  <g transform="translate(660, 540)">
+    <circle cx="30" cy="25" r="28" fill="none" stroke="rgba(240,208,96,0.3)" stroke-width="1.5"/>
+    <text x="30" y="20" text-anchor="middle" fill="#f0d060" font-family="Arial,sans-serif" font-size="14" font-weight="bold">2006</text>
+    <text x="30" y="34" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="Arial,sans-serif" font-size="9">Depuis</text>
+  </g>
+
+  <!-- Bottom decorative line -->
+  <line x1="40" y1="510" x2="760" y2="510" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
 </svg>

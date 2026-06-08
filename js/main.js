@@ -27,6 +27,53 @@ document.addEventListener('DOMContentLoaded', function() {
     overlay.addEventListener('click', closeDrawer);
   }
 
+  // --- Hero Carousel Auto-rotation ---
+  const carouselSlides = document.querySelectorAll('.carousel-slide');
+  if (carouselSlides.length > 1) {
+    let currentSlide = 0;
+    const slideInterval = 5000; // 5 seconds per slide
+
+    function goToSlide(index) {
+      carouselSlides.forEach(s => s.classList.remove('active'));
+      currentSlide = (index + carouselSlides.length) % carouselSlides.length;
+      carouselSlides[currentSlide].classList.add('active');
+    }
+
+    function nextSlide() {
+      goToSlide(currentSlide + 1);
+    }
+
+    // Start auto-rotation
+    let carouselTimer = setInterval(nextSlide, slideInterval);
+
+    // Pause on hover
+    const hero = document.querySelector('.hero');
+    if (hero) {
+      hero.addEventListener('mouseenter', () => clearInterval(carouselTimer));
+      hero.addEventListener('mouseleave', () => {
+        carouselTimer = setInterval(nextSlide, slideInterval);
+      });
+    }
+
+    // Touch swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+    hero.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    hero.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const diff = touchStartX - touchEndX;
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) goToSlide(currentSlide + 1);
+        else goToSlide(currentSlide - 1);
+        // Reset timer
+        clearInterval(carouselTimer);
+        carouselTimer = setInterval(nextSlide, slideInterval);
+      }
+    }, { passive: true });
+  }
+
   // --- Scroll Header Effect ---
   const header = document.querySelector('.header');
   let lastScroll = 0;
