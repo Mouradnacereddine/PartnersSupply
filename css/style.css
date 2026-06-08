@@ -401,7 +401,12 @@ h4 { font-size: 1.25rem; }
   position: relative;
   overflow: hidden;
   padding-top: 80px;
-  background: #0d0d14 linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('../images/hero/page-header-bg.png') center center / cover no-repeat;
+  /* Overlay doux + image couvrante, sans étirement */
+  background-color: #0d0d14;
+  background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('../images/hero/page-header-bg.png');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* No carousel, no overlay, no hero-bg.svg — single image background */
@@ -809,7 +814,12 @@ h4 { font-size: 1.25rem; }
   overflow: hidden;
   color: white;
   text-align: center;
-  background: #0d0d14 linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('../images/hero/page-header-bg.png') center center / cover no-repeat;
+  /* Overlay doux + image couvrante, sans étirement */
+  background-color: #0d0d14;
+  background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('../images/hero/page-header-bg.png');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 /* Pas de ::before ni ::after — l'image fait tout */
 .page-header h1 {
