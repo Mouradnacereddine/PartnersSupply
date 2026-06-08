@@ -395,7 +395,7 @@ h4 { font-size: 1.25rem; }
 /* --- HERO SECTION --- */
 .hero {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   color: white;
   position: relative;
   overflow: hidden;
@@ -454,6 +454,7 @@ h4 { font-size: 1.25rem; }
   text-align: center;
   position: relative;
   z-index: 2;
+  margin-top: clamp(60px, 12vh, 180px);
 }
 .hero h1 {
   font-size: 3.5rem;
@@ -1051,6 +1052,7 @@ h4 { font-size: 1.25rem; }
   .hero h1 { font-size: 2.2rem; }
   .hero .hero-subtitle { font-size: 1rem; }
   .hero { padding: 72px 0 0; min-height: max(80vh, calc(100vw * 1024 / 1536)); }
+  .hero-content { margin-top: clamp(50px, 8vh, 120px); }
   
   .stats-bar-grid { flex-wrap: wrap; gap: 16px; }
   .stats-bar-item { flex: 0 0 calc(50% - 16px); padding: 10px 10px; }
@@ -1084,6 +1086,7 @@ h4 { font-size: 1.25rem; }
   .hero .hero-actions { flex-direction: column; }
   .hero .hero-actions .btn { width: 100%; justify-content: center; }
   .hero { padding: 72px 0 0; min-height: max(70vh, calc(100vw * 1024 / 1536)); }
+  .hero-content { margin-top: clamp(30px, 4vh, 60px); }
   
   .stats-bar-grid { gap: 12px; }
   .stats-bar-item { flex: 0 0 calc(50% - 12px); padding: 8px 8px; }
