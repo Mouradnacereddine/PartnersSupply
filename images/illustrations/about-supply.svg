@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1628" />
+      <stop offset="100%" stop-color="#1a3a5c" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8c45a" />
+      <stop offset="100%" stop-color="#c8962e" />
+    </linearGradient>
+    <pattern id="gridPattern" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+  <rect width="800" height="600" fill="url(#gridPattern)"/>
+
+  <!-- World Map Silhouette (Abstract) -->
+  <g fill="rgba(255, 255, 255, 0.05)">
+    <!-- North America -->
+    <path d="M 100 150 Q 150 130 200 180 T 250 200 T 220 280 T 150 300 Z" />
+    <!-- South America -->
+    <path d="M 220 320 Q 250 380 280 440 T 240 520 T 200 450 Z" />
+    <!-- Eurasia & Africa -->
+    <path d="M 400 150 Q 500 100 650 150 T 750 200 T 700 350 T 550 380 T 450 300 Z" />
+    <path d="M 450 310 Q 520 350 550 420 T 500 530 T 420 400 Z" />
+  </g>
+
+  <!-- Connection lines representing trade routes -->
+  <g stroke="rgba(200, 150, 46, 0.4)" stroke-width="2" fill="none" stroke-dasharray="8,4">
+    <!-- Paris (approx 460, 200) to Algiers (approx 460, 280) -->
+    <path d="M 460 200 Q 450 240 460 280" />
+    <!-- Paris to West Africa (approx 400, 380) -->
+    <path d="M 460 200 Q 420 290 400 380" />
+    <!-- Paris to Gulf (approx 560, 290) -->
+    <path d="M 460 200 Q 510 245 560 290" />
+    <!-- Paris to China (approx 680, 240) -->
+    <path d="M 460 200 Q 570 200 680 240" />
+  </g>
+
+  <!-- Nodes (Glowing dots) -->
+  <g>
+    <!-- Paris (Center of Operations) -->
+    <circle cx="460" cy="200" r="8" fill="url(#goldGrad)" />
+    <circle cx="460" cy="200" r="16" fill="none" stroke="rgba(232, 196, 90, 0.5)" stroke-width="1.5">
+      <animate attributeName="r" values="8;24;8" dur="3s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Other hubs -->
+    <circle cx="460" cy="280" r="5" fill="#fff" opacity="0.9" />
+    <circle cx="400" cy="380" r="5" fill="#fff" opacity="0.9" />
+    <circle cx="560" cy="290" r="5" fill="#fff" opacity="0.9" />
+    <circle cx="680" cy="240" r="6" fill="url(#goldGrad)" />
+  </g>
+
+  <!-- Text / Info overlays -->
+  <text x="480" y="195" fill="#e8c45a" font-family="sans-serif" font-size="12" font-weight="bold">PARIS (HQ)</text>
+  <text x="480" y="210" fill="#fff" font-family="sans-serif" font-size="10" opacity="0.7">Bureau d'achats principal</text>
+  
+  <text x="580" y="295" fill="#fff" font-family="sans-serif" font-size="10" font-weight="bold">MOYEN-ORIENT</text>
+  <text x="310" y="385" fill="#fff" font-family="sans-serif" font-size="10" font-weight="bold">AFRIQUE</text>
+  <text x="698" y="245" fill="#e8c45a" font-family="sans-serif" font-size="10" font-weight="bold">ASIE</text>
+
+  <!-- Abstract icons overlay to symbolize sectors -->
+  <!-- Box (Logistics) at bottom left -->
+  <g transform="translate(60, 450)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" fill="none">
+    <rect x="0" y="0" width="60" height="60" rx="8" />
+    <path d="M 15 25 L 30 15 L 45 25 L 30 35 Z" stroke="url(#goldGrad)" />
+    <path d="M 15 25 L 15 45 L 30 52 L 30 35" />
+    <path d="M 45 25 L 45 45 L 30 52" />
+  </g>
+  <text x="130" y="475" fill="#fff" font-family="sans-serif" font-size="12" font-weight="bold">Logistique Intégrée</text>
+  <text x="130" y="495" fill="#64748b" font-family="sans-serif" font-size="10">Groupage &amp; Consolidation</text>
+
+  <!-- Shield (Quality) at bottom right -->
+  <g transform="translate(540, 450)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" fill="none">
+    <rect x="0" y="0" width="60" height="60" rx="8" />
+    <path d="M 30 15 C 30 15 45 18 45 28 C 45 38 35 48 30 51 C 25 48 15 38 15 28 C 15 18 30 15 30 15 Z" stroke="url(#goldGrad)" />
+    <path d="M 23 30 L 28 35 L 37 25" stroke="#fff" />
+  </g>
+  <text x="615" y="475" fill="#fff" font-family="sans-serif" font-size="12" font-weight="bold">Conformité &amp; Qualité</text>
+  <text x="615" y="495" fill="#64748b" font-family="sans-serif" font-size="10">Contrôle SGS, Cotecna, Veritas</text>
+</svg>
