@@ -10,60 +10,73 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-
   <!-- ===== HEADER ===== -->
   <header class="header" id="header">
     <div class="container">
-      <a href="index.html" class="header-logo"><img src="images/logos/logo_partners.png" alt="Partners Supply"><span>PARTNERS SUPPLY</span></a>
+      <a href="index.html" class="header-logo">
+        <img src="images/logos/logo_partners.png" alt="Partners Supply Logo">
+        <span>PARTNERS SUPPLY</span>
+      </a>
+
+      <!-- Desktop Navigation -->
       <nav class="nav-desktop">
-        <a href="index.html">Accueil</a>
-        <a href="a-propos.html">Qui sommes-nous</a>
+        <a href="index.html" class="nav-link" id="nav-accueil">Accueil</a>
+        <a href="a-propos.html" class="nav-link" id="nav-a-propos">Qui sommes-nous</a>
         <div class="dropdown">
-          <a href="#" class="active">Produits <i class="fas fa-chevron-down" style="font-size:0.7rem;margin-left:4px;"></i></a>
+          <a href="#" class="nav-link" id="nav-produits">Produits <i class="fas fa-chevron-down" style="font-size:0.7rem;margin-left:4px;"></i></a>
           <div class="dropdown-menu">
-            <a href="vehicules.html">🚗 Véhicules</a>
-            <a href="pieces-stellantis.html">⚙️ Pièces Stellantis</a>
-            <a href="equipements.html">🔧 Équipements</a>
-            <a href="minier.html" class="active">⛏️ Minier</a>
-            <a href="oil-gas.html">🛢️ Oil &amp; Gas</a>
+            <a href="vehicules.html">Véhicules</a>
+            <a href="pieces-stellantis.html">Pièces Stellantis</a>
+            <a href="equipements.html">Équipements</a>
+            <a href="minier.html">Équipements Miniers</a>
+            <a href="oil-gas.html">Oil &amp; Gas</a>
           </div>
         </div>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
+        <a href="services.html" class="nav-link" id="nav-services">Services</a>
+        <a href="contact.html" class="nav-link" id="nav-contact">Contact</a>
       </nav>
+
+      <!-- Language Switcher -->
       <div class="lang-switcher">
-        <a href="minier.html" class="active">FR</a>
-        <a href="en/minier.html">EN</a>
-        <a href="zh/minier.html">CN</a>
+        <a href="index.html" class="active" title="Français">FR</a>
+        <a href="en/index.html" title="English">EN</a>
+        <a href="zh/index.html" title="中文">CN</a>
       </div>
-      <a href="contact.html" class="btn btn-gold btn-sm header-cta"><i class="fas fa-paper-plane"></i> Devis rapide</a>
-      <button class="header-mobile-btn" id="mobileOpen"><i class="fas fa-bars"></i></button>
+
+      <!-- CTA -->
+      <a href="contact.html" class="btn btn-gold btn-sm header-cta">
+        <i class="fas fa-paper-plane"></i> Devis rapide
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button class="header-mobile-btn" id="mobileOpen" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
   </header>
 
   <!-- ===== MOBILE DRAWER ===== -->
   <div class="mobile-drawer-overlay" id="mobileOverlay"></div>
   <div class="mobile-drawer" id="mobileDrawer">
-    <button class="mobile-drawer-close" id="mobileClose">&times;</button>
+    <button class="mobile-drawer-close" id="mobileClose" aria-label="Fermer">&times;</button>
     <nav>
       <a href="index.html">Accueil</a>
       <a href="a-propos.html">Qui sommes-nous</a>
-      <a href="vehicules.html">🚗 Véhicules</a>
-      <a href="pieces-stellantis.html">⚙️ Pièces Stellantis</a>
-      <a href="equipements.html">🔧 Équipements</a>
-      <a href="minier.html">⛏️ Minier</a>
-      <a href="oil-gas.html">🛢️ Oil &amp; Gas</a>
+      <a href="vehicules.html">Véhicules</a>
+      <a href="pieces-stellantis.html">Pièces Stellantis</a>
+      <a href="equipements.html">Équipements</a>
+      <a href="minier.html">Équipements Miniers</a>
+      <a href="oil-gas.html">Oil &amp; Gas</a>
       <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
     </nav>
     <div class="lang-switcher">
-      <a href="minier.html" class="active">FR</a>
-      <a href="en/minier.html">EN</a>
-      <a href="zh/minier.html">CN</a>
+      <a href="index.html" class="active">FR</a>
+      <a href="en/index.html">EN</a>
+      <a href="zh/index.html">CN</a>
     </div>
   </div>
 
-  <!-- ===== PAGE HEADER ===== -->
   <section class="page-header">
     <div class="container">
       <h1>Minier</h1>
@@ -97,10 +110,10 @@
             <h3>FORATION</h3>
             <p>Machines de foration carrière et d'exploration — foreuses rotatives, fond-de-trou, marteaux, taillants.</p>
             <ul style="font-size:0.85rem;color:var(--text-light);line-height:2;margin-bottom:12px;">
-              <li>✅ Machines de foration carrière</li>
-              <li>✅ Machines de foration d'exploration</li>
-              <li>✅ Marteaux fond-de-trou (DTH)</li>
-              <li>✅ Taillants et couronnes</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Machines de foration carrière</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Machines de foration d'exploration</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Marteaux fond-de-trou (DTH)</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Taillants et couronnes</li>
             </ul>
             <a href="contact.html" class="btn btn-primary btn-sm">Devis <i class="fas fa-arrow-right"></i></a>
           </div>
@@ -112,10 +125,10 @@
             <h3>CONCASSAGE &amp; BROYAGE</h3>
             <p>Concasseurs à mâchoires et giratoires, broyeurs à cône et à percussion — réduction primaire et secondaire.</p>
             <ul style="font-size:0.85rem;color:var(--text-light);line-height:2;margin-bottom:12px;">
-              <li>✅ Concasseurs à mâchoires</li>
-              <li>✅ Concasseurs giratoires et à cône</li>
-              <li>✅ Broyeurs à percussion</li>
-              <li>✅ Pièces d'usure et mâchoires</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Concasseurs à mâchoires</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Concasseurs giratoires et à cône</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Broyeurs à percussion</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Pièces d'usure et mâchoires</li>
             </ul>
             <a href="contact.html" class="btn btn-primary btn-sm">Devis <i class="fas fa-arrow-right"></i></a>
           </div>
@@ -127,10 +140,10 @@
             <h3>CONVOYAGE</h3>
             <p>Bandes transporteuses, rouleaux, tambours moteurs — systèmes de manutention continue pour minerais et agrégats.</p>
             <ul style="font-size:0.85rem;color:var(--text-light);line-height:2;margin-bottom:12px;">
-              <li>✅ Bandes transporteuses caoutchouc</li>
-              <li>✅ Rouleaux et tambours moteurs</li>
-              <li>✅ Convoyeurs à vis et à chaîne</li>
-              <li>✅ Accessoires et maintenance</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Bandes transporteuses caoutchouc</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Rouleaux et tambours moteurs</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Convoyeurs à vis et à chaîne</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Accessoires et maintenance</li>
             </ul>
             <a href="contact.html" class="btn btn-primary btn-sm">Devis <i class="fas fa-arrow-right"></i></a>
           </div>
@@ -142,10 +155,10 @@
             <h3>PELLE EXCAVATRICE MINIÈRE</h3>
             <p>Pelles hydrauliques de grande capacité pour l'extraction minière à ciel ouvert et souterraine.</p>
             <ul style="font-size:0.85rem;color:var(--text-light);line-height:2;margin-bottom:12px;">
-              <li>✅ Pelles de grande capacité (50-800 tonnes)</li>
-              <li>✅ Pelles retro et frontale</li>
-              <li>✅ Godets de chargement</li>
-              <li>✅ Pièces d'usure et dent de godet</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Pelles de grande capacité (50-800 tonnes)</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Pelles retro et frontale</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Godets de chargement</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Pièces d'usure et dent de godet</li>
             </ul>
             <a href="contact.html" class="btn btn-primary btn-sm">Devis <i class="fas fa-arrow-right"></i></a>
           </div>
@@ -157,10 +170,10 @@
             <h3>TOMBEREAU</h3>
             <p>Tombereaux articulés et rigides pour le transport de minerais et de stériles sur sites miniers.</p>
             <ul style="font-size:0.85rem;color:var(--text-light);line-height:2;margin-bottom:12px;">
-              <li>✅ Tombereaux rigides (40 à 400 tonnes)</li>
-              <li>✅ Tombereaux articulés</li>
-              <li>✅ Bennes et protections</li>
-              <li>✅ Pneumatiques géants</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Tombereaux rigides (40 à 400 tonnes)</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Tombereaux articulés</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Bennes et protections</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Pneumatiques géants</li>
             </ul>
             <a href="contact.html" class="btn btn-primary btn-sm">Devis <i class="fas fa-arrow-right"></i></a>
           </div>
@@ -172,10 +185,10 @@
             <h3>LABORATOIRE</h3>
             <p>Matériels de laboratoire et d'analyses : tamiseuses, diviseurs d'échantillons, pulvérisateurs — préparation et analyse d'échantillons miniers.</p>
             <ul style="font-size:0.85rem;color:var(--text-light);line-height:2;margin-bottom:12px;">
-              <li>✅ Tamiseuses et granulométrie</li>
-              <li>✅ Diviseurs d'échantillons</li>
-              <li>✅ Pulvérisateurs et broyeurs</li>
-              <li>✅ Étuves et balances de précision</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Tamiseuses et granulométrie</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Diviseurs d'échantillons</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Pulvérisateurs et broyeurs</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Étuves et balances de précision</li>
             </ul>
             <a href="contact.html" class="btn btn-primary btn-sm">Devis <i class="fas fa-arrow-right"></i></a>
           </div>
@@ -187,10 +200,10 @@
             <h3>PRODUITS CHIMIQUES</h3>
             <p>Réactifs de flottation, cyanure, acides, coagulants — produits chimiques pour le traitement du minerai.</p>
             <ul style="font-size:0.85rem;color:var(--text-light);line-height:2;margin-bottom:12px;">
-              <li>✅ Réactifs de flottation</li>
-              <li>✅ Cyanure et acides industriels</li>
-              <li>✅ Coagulants et floculants</li>
-              <li>✅ Produits de traitement d'eau</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Réactifs de flottation</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Cyanure et acides industriels</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Coagulants et floculants</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Produits de traitement d'eau</li>
             </ul>
             <a href="contact.html" class="btn btn-primary btn-sm">Devis <i class="fas fa-arrow-right"></i></a>
           </div>
@@ -202,10 +215,10 @@
             <h3>GROUPE D'ÉCLAIRAGE</h3>
             <p>Groupes d'éclairage mobiles et fixes pour chantiers miniers, sites isolés et opérations de nuit.</p>
             <ul style="font-size:0.85rem;color:var(--text-light);line-height:2;margin-bottom:12px;">
-              <li>✅ Tours d'éclairage mobiles</li>
-              <li>✅ Projecteurs LED et halogène</li>
-              <li>✅ Éclairage ATEX</li>
-              <li>✅ Mâts télescopiques</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Tours d'éclairage mobiles</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Projecteurs LED et halogène</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Éclairage ATEX</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Mâts télescopiques</li>
             </ul>
             <a href="contact.html" class="btn btn-primary btn-sm">Devis <i class="fas fa-arrow-right"></i></a>
           </div>
@@ -217,10 +230,10 @@
             <h3>PROTECTION &amp; SÉCURITÉ</h3>
             <p>Équipements de protection individuelle (EPI), détection de gaz, ventilation — sécurité des personnels sur site minier.</p>
             <ul style="font-size:0.85rem;color:var(--text-light);line-height:2;margin-bottom:12px;">
-              <li>✅ Casques, gants, chaussures de sécurité</li>
-              <li>✅ Détecteurs de gaz portables</li>
-              <li>✅ Ventilation et aspiration</li>
-              <li>✅ Signalisation et balisage</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Casques, gants, chaussures de sécurité</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Détecteurs de gaz portables</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Ventilation et aspiration</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Signalisation et balisage</li>
             </ul>
             <a href="contact.html" class="btn btn-primary btn-sm">Devis <i class="fas fa-arrow-right"></i></a>
           </div>
@@ -287,6 +300,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
+        <!-- Brand -->
         <div class="footer-brand">
           <img src="images/logos/logo_partners.png" alt="Partners Supply" style="filter:brightness(0) invert(1);height:36px;">
           <p>Bureau d'achats spécialisé dans la fourniture de pièces Stellantis, équipements industriels, miniers et Oil &amp; Gas. Basé à Paris — Présent en Afrique, Europe et Moyen-Orient.</p>
@@ -296,16 +310,20 @@
             <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
+
+        <!-- Produits -->
         <div>
           <h4>Produits</h4>
           <ul>
-            <li><a href="vehicules.html">🚗 Véhicules</a></li>
-            <li><a href="pieces-stellantis.html">⚙️ Pièces Stellantis</a></li>
-            <li><a href="equipements.html">🔧 Équipements</a></li>
-            <li><a href="minier.html">⛏️ Minier</a></li>
-            <li><a href="oil-gas.html">🛢️ Oil &amp; Gas</a></li>
+            <li><a href="vehicules.html">Véhicules</a></li>
+            <li><a href="pieces-stellantis.html">Pièces Stellantis</a></li>
+            <li><a href="equipements.html">Équipements</a></li>
+            <li><a href="minier.html">Minier</a></li>
+            <li><a href="oil-gas.html">Oil &amp; Gas</a></li>
           </ul>
         </div>
+
+        <!-- Services -->
         <div>
           <h4>Services</h4>
           <ul>
@@ -316,6 +334,8 @@
             <li><a href="contact.html">SAV</a></li>
           </ul>
         </div>
+
+        <!-- Contact -->
         <div>
           <h4>Contact</h4>
           <ul class="footer-contact">
@@ -326,6 +346,7 @@
           </ul>
         </div>
       </div>
+
       <div class="footer-bottom">
         <span>&copy; 2026 Partners Supply — Tous droits réservés</span>
         <div class="footer-bottom-links">
@@ -337,12 +358,15 @@
     </div>
   </footer>
 
+  
+
+  
+
   <!-- ===== WHATSAPP FLOATING BUTTON ===== -->
-  <a href="https://wa.me/33157190714?text=Bonjour%20Partners%20Supply%2C%20je%20souhaite%20des%20informations%20sur%20vos%20%C3%A9quipements%20miniers."
+  <a href="https://wa.me/33157190714?text=Bonjour%20Partners%20Supply%2C%20je%20souhaite%20des%20informations." 
      class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
-
   <script src="js/main.js"></script>
 </body>
 </html>

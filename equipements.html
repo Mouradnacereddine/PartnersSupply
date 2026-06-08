@@ -10,60 +10,73 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-
   <!-- ===== HEADER ===== -->
   <header class="header" id="header">
     <div class="container">
-      <a href="index.html" class="header-logo"><img src="images/logos/logo_partners.png" alt="Partners Supply"><span>PARTNERS SUPPLY</span></a>
+      <a href="index.html" class="header-logo">
+        <img src="images/logos/logo_partners.png" alt="Partners Supply Logo">
+        <span>PARTNERS SUPPLY</span>
+      </a>
+
+      <!-- Desktop Navigation -->
       <nav class="nav-desktop">
-        <a href="index.html">Accueil</a>
-        <a href="a-propos.html">Qui sommes-nous</a>
+        <a href="index.html" class="nav-link" id="nav-accueil">Accueil</a>
+        <a href="a-propos.html" class="nav-link" id="nav-a-propos">Qui sommes-nous</a>
         <div class="dropdown">
-          <a href="#" class="active">Produits <i class="fas fa-chevron-down" style="font-size:0.7rem;margin-left:4px;"></i></a>
+          <a href="#" class="nav-link" id="nav-produits">Produits <i class="fas fa-chevron-down" style="font-size:0.7rem;margin-left:4px;"></i></a>
           <div class="dropdown-menu">
-            <a href="vehicules.html">🚗 Véhicules</a>
-            <a href="pieces-stellantis.html">⚙️ Pièces Stellantis</a>
-            <a href="equipements.html" class="active">🔧 Équipements</a>
-            <a href="minier.html">⛏️ Minier</a>
-            <a href="oil-gas.html">🛢️ Oil &amp; Gas</a>
+            <a href="vehicules.html">Véhicules</a>
+            <a href="pieces-stellantis.html">Pièces Stellantis</a>
+            <a href="equipements.html">Équipements</a>
+            <a href="minier.html">Équipements Miniers</a>
+            <a href="oil-gas.html">Oil &amp; Gas</a>
           </div>
         </div>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
+        <a href="services.html" class="nav-link" id="nav-services">Services</a>
+        <a href="contact.html" class="nav-link" id="nav-contact">Contact</a>
       </nav>
+
+      <!-- Language Switcher -->
       <div class="lang-switcher">
-        <a href="equipements.html" class="active">FR</a>
-        <a href="en/equipements.html">EN</a>
-        <a href="zh/equipements.html">CN</a>
+        <a href="index.html" class="active" title="Français">FR</a>
+        <a href="en/index.html" title="English">EN</a>
+        <a href="zh/index.html" title="中文">CN</a>
       </div>
-      <a href="contact.html" class="btn btn-gold btn-sm header-cta"><i class="fas fa-paper-plane"></i> Devis rapide</a>
-      <button class="header-mobile-btn" id="mobileOpen"><i class="fas fa-bars"></i></button>
+
+      <!-- CTA -->
+      <a href="contact.html" class="btn btn-gold btn-sm header-cta">
+        <i class="fas fa-paper-plane"></i> Devis rapide
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button class="header-mobile-btn" id="mobileOpen" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
   </header>
 
   <!-- ===== MOBILE DRAWER ===== -->
   <div class="mobile-drawer-overlay" id="mobileOverlay"></div>
   <div class="mobile-drawer" id="mobileDrawer">
-    <button class="mobile-drawer-close" id="mobileClose">&times;</button>
+    <button class="mobile-drawer-close" id="mobileClose" aria-label="Fermer">&times;</button>
     <nav>
       <a href="index.html">Accueil</a>
       <a href="a-propos.html">Qui sommes-nous</a>
-      <a href="vehicules.html">🚗 Véhicules</a>
-      <a href="pieces-stellantis.html">⚙️ Pièces Stellantis</a>
-      <a href="equipements.html">🔧 Équipements</a>
-      <a href="minier.html">⛏️ Minier</a>
-      <a href="oil-gas.html">🛢️ Oil &amp; Gas</a>
+      <a href="vehicules.html">Véhicules</a>
+      <a href="pieces-stellantis.html">Pièces Stellantis</a>
+      <a href="equipements.html">Équipements</a>
+      <a href="minier.html">Équipements Miniers</a>
+      <a href="oil-gas.html">Oil &amp; Gas</a>
       <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
     </nav>
     <div class="lang-switcher">
-      <a href="equipements.html" class="active">FR</a>
-      <a href="en/equipements.html">EN</a>
-      <a href="zh/equipements.html">CN</a>
+      <a href="index.html" class="active">FR</a>
+      <a href="en/index.html">EN</a>
+      <a href="zh/index.html">CN</a>
     </div>
   </div>
 
-  <!-- ===== PAGE HEADER ===== -->
   <section class="page-header">
     <div class="container">
       <h1>Équipements</h1>
@@ -97,10 +110,10 @@
             <h3>BULLDOZER</h3>
             <p>Engins lourds de terrassement pour les grands chantiers de construction et miniers.</p>
             <ul style="font-size:0.85rem;color:var(--text-light);line-height:2;margin-bottom:12px;">
-              <li>✅ Bulldozers à chaînes (D6 à D11)</li>
-              <li>✅ Lames de terrassement et défrichement</li>
-              <li>✅ Ripper et décapeuse</li>
-              <li>✅ Pièces d'usure et train de roulement</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Bulldozers à chaînes (D6 à D11)</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Lames de terrassement et défrichement</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Ripper et décapeuse</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Pièces d'usure et train de roulement</li>
             </ul>
             <a href="contact.html" class="btn btn-primary btn-sm">Devis <i class="fas fa-arrow-right"></i></a>
           </div>
@@ -112,10 +125,10 @@
             <h3>CHARGEUSE</h3>
             <p>Chargeuses sur pneus et sur chenilles — chargement, manutention et transport de matériaux.</p>
             <ul style="font-size:0.85rem;color:var(--text-light);line-height:2;margin-bottom:12px;">
-              <li>✅ Chargeuses sur pneus (1 à 15 tonnes)</li>
-              <li>✅ Chargeuses sur chenilles</li>
-              <li>✅ Godets et accessoires</li>
-              <li>✅ Pièces et maintenance</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Chargeuses sur pneus (1 à 15 tonnes)</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Chargeuses sur chenilles</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Godets et accessoires</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Pièces et maintenance</li>
             </ul>
             <a href="contact.html" class="btn btn-primary btn-sm">Devis <i class="fas fa-arrow-right"></i></a>
           </div>
@@ -127,10 +140,10 @@
             <h3>NIVELEUSE</h3>
             <p>Niveleuses pour le nivellement, le profilage et l'entretien des pistes de chantier.</p>
             <ul style="font-size:0.85rem;color:var(--text-light);line-height:2;margin-bottom:12px;">
-              <li>✅ Niveleuses toutes marques</li>
-              <li>✅ Lames de nivellement</li>
-              <li>✅ Entretien de pistes et plateformes</li>
-              <li>✅ Pièces et consommables</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Niveleuses toutes marques</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Lames de nivellement</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Entretien de pistes et plateformes</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Pièces et consommables</li>
             </ul>
             <a href="contact.html" class="btn btn-primary btn-sm">Devis <i class="fas fa-arrow-right"></i></a>
           </div>
@@ -142,10 +155,10 @@
             <h3>FINISSEUSE</h3>
             <p>Finisseuses d'enrobés pour la pose de revêtements routiers et l'aménagement de chaussées.</p>
             <ul style="font-size:0.85rem;color:var(--text-light);line-height:2;margin-bottom:12px;">
-              <li>✅ Finisseuses à chenilles et à pneus</li>
-              <li>✅ Tables de compactage et liseuses</li>
-              <li>✅ Pose d'enrobés bitumineux</li>
-              <li>✅ Accessoires et pièces de rechange</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Finisseuses à chenilles et à pneus</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Tables de compactage et liseuses</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Pose d'enrobés bitumineux</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Accessoires et pièces de rechange</li>
             </ul>
             <a href="contact.html" class="btn btn-primary btn-sm">Devis <i class="fas fa-arrow-right"></i></a>
           </div>
@@ -157,10 +170,10 @@
             <h3>COMPACTEUR</h3>
             <p>Compacteurs vibrants, rouleaux et plaques — compactage des sols, enrobés et remblais.</p>
             <ul style="font-size:0.85rem;color:var(--text-light);line-height:2;margin-bottom:12px;">
-              <li>✅ Rouleaux compresseurs tandem et vibrant</li>
-              <li>✅ Compacteurs de sol (pied dameur, lisse)</li>
-              <li>✅ Plaques vibrantes et pilonneuses</li>
-              <li>✅ Pièces et maintenance</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Rouleaux compresseurs tandem et vibrant</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Compacteurs de sol (pied dameur, lisse)</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Plaques vibrantes et pilonneuses</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Pièces et maintenance</li>
             </ul>
             <a href="contact.html" class="btn btn-primary btn-sm">Devis <i class="fas fa-arrow-right"></i></a>
           </div>
@@ -172,10 +185,10 @@
             <h3>PELLE EXCAVATRICE</h3>
             <p>Pelles hydrauliques sur chenilles et sur pneus — excavation, terrassement et démolition.</p>
             <ul style="font-size:0.85rem;color:var(--text-light);line-height:2;margin-bottom:12px;">
-              <li>✅ Pelles sur chenilles (1 à 100 tonnes)</li>
-              <li>✅ Pelles sur pneus</li>
-              <li>✅ Godets, brise-roche, grappin</li>
-              <li>✅ Pièces d'attache et consommables</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Pelles sur chenilles (1 à 100 tonnes)</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Pelles sur pneus</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Godets, brise-roche, grappin</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Pièces d'attache et consommables</li>
             </ul>
             <a href="contact.html" class="btn btn-primary btn-sm">Devis <i class="fas fa-arrow-right"></i></a>
           </div>
@@ -187,10 +200,10 @@
             <h3>DUMPER ARTICULÉ</h3>
             <p>Tombereaux articulés et rigides — transport de matériaux en carrière, mines et chantiers.</p>
             <ul style="font-size:0.85rem;color:var(--text-light);line-height:2;margin-bottom:12px;">
-              <li>✅ Tombereaux articulés (20 à 60 tonnes)</li>
-              <li>✅ Tombereaux rigides</li>
-              <li>✅ Bennes et protections</li>
-              <li>✅ Pièces et pneumatiques</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Tombereaux articulés (20 à 60 tonnes)</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Tombereaux rigides</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Bennes et protections</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Pièces et pneumatiques</li>
             </ul>
             <a href="contact.html" class="btn btn-primary btn-sm">Devis <i class="fas fa-arrow-right"></i></a>
           </div>
@@ -202,10 +215,10 @@
             <h3>GROUPE ÉLECTROGÈNE</h3>
             <p>Groupes diesel et essence de 5 à 2 000 kVA — alimentation de secours, chantiers et sites isolés.</p>
             <ul style="font-size:0.85rem;color:var(--text-light);line-height:2;margin-bottom:12px;">
-              <li>✅ Groupes électrogènes de 5 à 2000 kVA</li>
-              <li>✅ Armoires de transfert automatique</li>
-              <li>✅ Conteneurisés insonorisés</li>
-              <li>✅ Location et maintenance</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Groupes électrogènes de 5 à 2000 kVA</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Armoires de transfert automatique</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Conteneurisés insonorisés</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Location et maintenance</li>
             </ul>
             <a href="contact.html" class="btn btn-primary btn-sm">Devis <i class="fas fa-arrow-right"></i></a>
           </div>
@@ -217,10 +230,10 @@
             <h3>GROUPE DE SOUDURE</h3>
             <p>Postes à souder mobiles, groupes électrogènes de soudage — pour chantiers et ateliers.</p>
             <ul style="font-size:0.85rem;color:var(--text-light);line-height:2;margin-bottom:12px;">
-              <li>✅ Postes à souder inverter</li>
-              <li>✅ Groupes électrogènes de soudage</li>
-              <li>✅ Électrodes et fils de soudure</li>
-              <li>✅ Accessoires et consommables</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Postes à souder inverter</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Groupes électrogènes de soudage</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Électrodes et fils de soudure</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Accessoires et consommables</li>
             </ul>
             <a href="contact.html" class="btn btn-primary btn-sm">Devis <i class="fas fa-arrow-right"></i></a>
           </div>
@@ -232,10 +245,10 @@
             <h3>COMPRESSEUR</h3>
             <p>Compresseurs d'air portables et fixes — alimentation d'outils pneumatiques et forage.</p>
             <ul style="font-size:0.85rem;color:var(--text-light);line-height:2;margin-bottom:12px;">
-              <li>✅ Compresseurs à pistons et vis</li>
-              <li>✅ Compresseurs portables chantier</li>
-              <li>✅ Sécheurs et filtres</li>
-              <li>✅ Pièces et maintenance</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Compresseurs à pistons et vis</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Compresseurs portables chantier</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Sécheurs et filtres</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Pièces et maintenance</li>
             </ul>
             <a href="contact.html" class="btn btn-primary btn-sm">Devis <i class="fas fa-arrow-right"></i></a>
           </div>
@@ -247,10 +260,10 @@
             <h3>GRUE</h3>
             <p>Grues mobiles, portiques, chariots télescopiques — levage et manutention tous secteurs.</p>
             <ul style="font-size:0.85rem;color:var(--text-light);line-height:2;margin-bottom:12px;">
-              <li>✅ Grues mobiles et tout-terrain</li>
-              <li>✅ Portiques et ponts roulants</li>
-              <li>✅ Chariots télescopiques (Manitou)</li>
-              <li>✅ Élingues et accessoires de levage</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Grues mobiles et tout-terrain</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Portiques et ponts roulants</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Chariots télescopiques (Manitou)</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Élingues et accessoires de levage</li>
             </ul>
             <a href="contact.html" class="btn btn-primary btn-sm">Devis <i class="fas fa-arrow-right"></i></a>
           </div>
@@ -262,10 +275,10 @@
             <h3>PNEUMATIQUE</h3>
             <p>Outils pneumatiques, marteaux-piqueurs, perforateurs — équipements pour chantiers et TP.</p>
             <ul style="font-size:0.85rem;color:var(--text-light);line-height:2;margin-bottom:12px;">
-              <li>✅ Marteaux-piqueurs et brise-roche</li>
-              <li>✅ Perforateurs et burineurs</li>
-              <li>✅ Clés à choc et visseuses</li>
-              <li>✅ Flexible et raccords rapides</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Marteaux-piqueurs et brise-roche</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Perforateurs et burineurs</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Clés à choc et visseuses</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Flexible et raccords rapides</li>
             </ul>
             <a href="contact.html" class="btn btn-primary btn-sm">Devis <i class="fas fa-arrow-right"></i></a>
           </div>
@@ -277,10 +290,10 @@
             <h3>OUTILLAGE</h3>
             <p>Outillage professionnel pour l'industrie, la maintenance et les travaux publics.</p>
             <ul style="font-size:0.85rem;color:var(--text-light);line-height:2;margin-bottom:12px;">
-              <li>✅ Outillage à main et électroportatif</li>
-              <li>✅ Appareils de mesure et de contrôle</li>
-              <li>✅ Équipements d'atelier</li>
-              <li>✅ Consommables et fournitures industrielles</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Outillage à main et électroportatif</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Appareils de mesure et de contrôle</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Équipements d'atelier</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Consommables et fournitures industrielles</li>
             </ul>
             <a href="contact.html" class="btn btn-primary btn-sm">Devis <i class="fas fa-arrow-right"></i></a>
           </div>
@@ -334,6 +347,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
+        <!-- Brand -->
         <div class="footer-brand">
           <img src="images/logos/logo_partners.png" alt="Partners Supply" style="filter:brightness(0) invert(1);height:36px;">
           <p>Bureau d'achats spécialisé dans la fourniture de pièces Stellantis, équipements industriels, miniers et Oil &amp; Gas. Basé à Paris — Présent en Afrique, Europe et Moyen-Orient.</p>
@@ -343,16 +357,20 @@
             <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
+
+        <!-- Produits -->
         <div>
           <h4>Produits</h4>
           <ul>
-            <li><a href="vehicules.html">🚗 Véhicules</a></li>
-            <li><a href="pieces-stellantis.html">⚙️ Pièces Stellantis</a></li>
-            <li><a href="equipements.html">🔧 Équipements</a></li>
-            <li><a href="minier.html">⛏️ Minier</a></li>
-            <li><a href="oil-gas.html">🛢️ Oil &amp; Gas</a></li>
+            <li><a href="vehicules.html">Véhicules</a></li>
+            <li><a href="pieces-stellantis.html">Pièces Stellantis</a></li>
+            <li><a href="equipements.html">Équipements</a></li>
+            <li><a href="minier.html">Minier</a></li>
+            <li><a href="oil-gas.html">Oil &amp; Gas</a></li>
           </ul>
         </div>
+
+        <!-- Services -->
         <div>
           <h4>Services</h4>
           <ul>
@@ -363,6 +381,8 @@
             <li><a href="contact.html">SAV</a></li>
           </ul>
         </div>
+
+        <!-- Contact -->
         <div>
           <h4>Contact</h4>
           <ul class="footer-contact">
@@ -373,6 +393,7 @@
           </ul>
         </div>
       </div>
+
       <div class="footer-bottom">
         <span>&copy; 2026 Partners Supply — Tous droits réservés</span>
         <div class="footer-bottom-links">
@@ -384,12 +405,15 @@
     </div>
   </footer>
 
+  
+
+  
+
   <!-- ===== WHATSAPP FLOATING BUTTON ===== -->
-  <a href="https://wa.me/33157190714?text=Bonjour%20Partners%20Supply%2C%20je%20souhaite%20des%20informations%20sur%20les%20%C3%A9quipements."
+  <a href="https://wa.me/33157190714?text=Bonjour%20Partners%20Supply%2C%20je%20souhaite%20des%20informations." 
      class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
-
   <script src="js/main.js"></script>
 </body>
 </html>

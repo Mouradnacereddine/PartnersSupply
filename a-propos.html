@@ -11,62 +11,73 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <!-- HEADER (same as index) -->
+  <!-- ===== HEADER ===== -->
   <header class="header" id="header">
     <div class="container">
       <a href="index.html" class="header-logo">
-        <img src="images/logos/logo_partners.png" alt="Partners Supply">
+        <img src="images/logos/logo_partners.png" alt="Partners Supply Logo">
         <span>PARTNERS SUPPLY</span>
       </a>
+
+      <!-- Desktop Navigation -->
       <nav class="nav-desktop">
-        <a href="index.html">Accueil</a>
-        <a href="a-propos.html" class="active">Qui sommes-nous</a>
+        <a href="index.html" class="nav-link" id="nav-accueil">Accueil</a>
+        <a href="a-propos.html" class="nav-link" id="nav-a-propos" class="active">Qui sommes-nous</a>
         <div class="dropdown">
-          <a href="#">Produits <i class="fas fa-chevron-down" style="font-size:0.7rem;margin-left:4px;"></i></a>
+          <a href="#" class="nav-link" id="nav-produits">Produits <i class="fas fa-chevron-down" style="font-size:0.7rem;margin-left:4px;"></i></a>
           <div class="dropdown-menu">
-            <a href="vehicules.html">🚗 Véhicules</a>
-            <a href="pieces-stellantis.html">⚙️ Pièces Stellantis</a>
-            <a href="equipements.html">🔧 Équipements</a>
-            <a href="minier.html">⛏️ Équipements Miniers</a>
-            <a href="oil-gas.html">🛢️ Oil &amp; Gas</a>
+            <a href="vehicules.html">Véhicules</a>
+            <a href="pieces-stellantis.html">Pièces Stellantis</a>
+            <a href="equipements.html">Équipements</a>
+            <a href="minier.html">Équipements Miniers</a>
+            <a href="oil-gas.html">Oil &amp; Gas</a>
           </div>
         </div>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
+        <a href="services.html" class="nav-link" id="nav-services">Services</a>
+        <a href="contact.html" class="nav-link" id="nav-contact">Contact</a>
       </nav>
+
+      <!-- Language Switcher -->
       <div class="lang-switcher">
-        <a href="a-propos.html" class="active">FR</a>
-        <a href="en/about.html">EN</a>
-        <a href="zh/about.html">CN</a>
+        <a href="index.html" class="active" title="Français">FR</a>
+        <a href="en/index.html" title="English">EN</a>
+        <a href="zh/index.html" title="中文">CN</a>
       </div>
-      <a href="contact.html" class="btn btn-gold btn-sm header-cta"><i class="fas fa-paper-plane"></i> Devis rapide</a>
-      <button class="header-mobile-btn" id="mobileOpen" aria-label="Menu"><i class="fas fa-bars"></i></button>
+
+      <!-- CTA -->
+      <a href="contact.html" class="btn btn-gold btn-sm header-cta">
+        <i class="fas fa-paper-plane"></i> Devis rapide
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button class="header-mobile-btn" id="mobileOpen" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
   </header>
 
-  <!-- MOBILE DRAWER (same) -->
+  <!-- ===== MOBILE DRAWER ===== -->
   <div class="mobile-drawer-overlay" id="mobileOverlay"></div>
   <div class="mobile-drawer" id="mobileDrawer">
-    <button class="mobile-drawer-close" id="mobileClose">&times;</button>
+    <button class="mobile-drawer-close" id="mobileClose" aria-label="Fermer">&times;</button>
     <nav>
       <a href="index.html">Accueil</a>
       <a href="a-propos.html">Qui sommes-nous</a>
-      <a href="vehicules.html">🚗 Véhicules</a>
-      <a href="pieces-stellantis.html">⚙️ Pièces Stellantis</a>
-      <a href="equipements.html">🔧 Équipements</a>
-      <a href="minier.html">⛏️ Minier</a>
-      <a href="oil-gas.html">🛢️ Oil &amp; Gas</a>
+      <a href="vehicules.html">Véhicules</a>
+      <a href="pieces-stellantis.html">Pièces Stellantis</a>
+      <a href="equipements.html">Équipements</a>
+      <a href="minier.html">Équipements Miniers</a>
+      <a href="oil-gas.html">Oil &amp; Gas</a>
       <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
     </nav>
     <div class="lang-switcher">
-      <a href="a-propos.html" class="active">FR</a>
-      <a href="en/about.html">EN</a>
-      <a href="zh/about.html">CN</a>
+      <a href="index.html" class="active">FR</a>
+      <a href="en/index.html">EN</a>
+      <a href="zh/index.html">CN</a>
     </div>
   </div>
 
-  <!-- PAGE HEADER -->
   <section class="page-header">
     <div class="container">
       <h1>Qui sommes-nous</h1>
@@ -79,37 +90,44 @@
     </div>
   </section>
 
-  <!-- NOTRE HISTOIRE -->
   <section class="section">
     <div class="container">
-      <div class="section-title animate-on-scroll">
-        <h2>Notre histoire</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;" class="animate-on-scroll">
+        <div>
+          <div class="section-title" style="text-align:left;margin-bottom:20px;">
+            <h2>Notre histoire</h2>
+          </div>
+          <p style="font-size:1.05rem;color:var(--text-light);line-height:1.8;margin-bottom:1.2rem;">
+            Créée en <strong>2006</strong> au sein du groupe de transport international <strong>TRANSPROJETS</strong>, 
+            la société <strong>PARTNERS</strong> est un bureau d'achats spécialisé dans la fourniture 
+            de pièces de rechange d'origine automobile et poids lourds pour les véhicules français et étrangers.
+          </p>
+          <p style="font-size:1.05rem;color:var(--text-light);line-height:1.8;margin-bottom:1.2rem;">
+            Basée au sud de Paris, elle dispose de bureaux et d'entrepôts permettant de grouper et de consolider 
+            des pièces de rechange, mais aussi des équipements et matériels pour sa clientèle internationale.
+          </p>
+          <p style="font-size:1.05rem;color:var(--text-light);line-height:1.8;margin-bottom:1.2rem;">
+            Depuis <strong>2013</strong>, notre division <strong>MINING OIL &amp; GAS</strong> 
+            répond spécifiquement aux besoins des compagnies minières et pétrolières en Afrique et au Moyen-Orient.
+          </p>
+        </div>
+        <div>
+          <img src="images/illustrations/about-supply.svg" alt="Partners Supply Chain Map" style="width:100%;height:auto;border-radius:12px;box-shadow:var(--shadow-lg);">
+        </div>
       </div>
-      <div style="max-width:850px;margin:0 auto;" class="animate-on-scroll">
-        <p style="font-size:1.1rem;color:var(--text-light);line-height:1.9;margin-bottom:1.2rem;">
-          Créée en <strong>2006</strong> au sein du groupe de transport international <strong>TRANSPROJETS</strong>, 
-          la société <strong>PARTNERS</strong> est un bureau d'achats spécialisé dans la fourniture 
-          de pièces de rechange d'origine automobile et poids lourds pour les véhicules français et étrangers.
-        </p>
-        <p style="font-size:1.1rem;color:var(--text-light);line-height:1.9;margin-bottom:1.2rem;">
-          Basée au sud de Paris, elle dispose de bureaux et d'entrepôts permettant de grouper et de consolider 
-          des pièces de rechange, mais aussi des équipements et matériels pour sa clientèle internationale.
-        </p>
-        <p style="font-size:1.1rem;color:var(--text-light);line-height:1.9;margin-bottom:1.2rem;">
+      
+      <div style="max-width:850px;margin:40px auto 0 auto;" class="animate-on-scroll">
+        <p style="font-size:1.05rem;color:var(--text-light);line-height:1.8;margin-bottom:1.2rem;">
           Les domaines d'activité regroupent les industries <strong>automobiles</strong>, 
           <strong>poids lourds</strong> et les <strong>travaux publics</strong>. Nos clientèles européennes 
           et internationales nous ont permis de tisser des liens très étroits avec de nombreux fabricants 
           et réseaux de distribution.
         </p>
-        <p style="font-size:1.1rem;color:var(--text-light);line-height:1.9;margin-bottom:1.2rem;">
-          Depuis <strong>2013</strong>, une nouvelle division a été créée : le département 
-          <strong>MINING OIL &amp; GAS</strong>, spécialisé pour tout matériel approchant cette activité :
-        </p>
         <ul style="margin:20px 0 20px 20px;color:var(--text-light);font-size:1.05rem;line-height:2;">
-          <li>✅ Distribution de véhicules et d'engins neufs et d'occasion</li>
-          <li>✅ Matériels d'exploration et d'exploitation minière</li>
-          <li>✅ Matériels spécifiques pour les projets Oil &amp; Gas</li>
-          <li>✅ Pièces de rechange et outillage pour ces matériels</li>
+          <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Distribution de véhicules et d'engins neufs et d'occasion</li>
+          <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Matériels d'exploration et d'exploitation minière</li>
+          <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Matériels spécifiques pour les projets Oil &amp; Gas</li>
+          <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Pièces de rechange et outillage pour ces matériels</li>
         </ul>
       </div>
     </div>
@@ -235,60 +253,73 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
+        <!-- Brand -->
         <div class="footer-brand">
           <img src="images/logos/logo_partners.png" alt="Partners Supply" style="filter:brightness(0) invert(1);height:36px;">
-          <p>Bureau d'achats spécialisé dans la fourniture de pièces Stellantis, équipements industriels, miniers et Oil &amp; Gas.</p>
+          <p>Bureau d'achats spécialisé dans la fourniture de pièces Stellantis, équipements industriels, miniers et Oil &amp; Gas. Basé à Paris — Présent en Afrique, Europe et Moyen-Orient.</p>
           <div class="footer-social">
             <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
             <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
+
+        <!-- Produits -->
         <div>
           <h4>Produits</h4>
           <ul>
-            <li><a href="vehicules.html">🚗 Véhicules</a></li>
-            <li><a href="pieces-stellantis.html">⚙️ Pièces Stellantis</a></li>
-            <li><a href="equipements.html">🔧 Équipements</a></li>
-            <li><a href="minier.html">⛏️ Minier</a></li>
-            <li><a href="oil-gas.html">🛢️ Oil &amp; Gas</a></li>
+            <li><a href="vehicules.html">Véhicules</a></li>
+            <li><a href="pieces-stellantis.html">Pièces Stellantis</a></li>
+            <li><a href="equipements.html">Équipements</a></li>
+            <li><a href="minier.html">Minier</a></li>
+            <li><a href="oil-gas.html">Oil &amp; Gas</a></li>
           </ul>
         </div>
+
+        <!-- Services -->
         <div>
           <h4>Services</h4>
           <ul>
             <li><a href="services.html">Supply Chain</a></li>
             <li><a href="services.html">Logistique</a></li>
             <li><a href="services.html">Expédition</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="services.html">Conseil technique</a></li>
+            <li><a href="contact.html">SAV</a></li>
           </ul>
         </div>
+
+        <!-- Contact -->
         <div>
           <h4>Contact</h4>
           <ul class="footer-contact">
-            <li><i class="fas fa-map-marker-alt"></i> 48-60 rue de l'Aubépine, Antony</li>
+            <li><i class="fas fa-map-marker-alt"></i> 48-60 rue de l'Aubépine, Antony, France</li>
             <li><i class="fas fa-phone"></i> +33 (0)1 57 19 07 14</li>
             <li><i class="fas fa-envelope"></i> infos@partners-supply.com</li>
             <li><i class="fas fa-globe"></i> www.partners-supply.com</li>
           </ul>
         </div>
       </div>
+
       <div class="footer-bottom">
         <span>&copy; 2026 Partners Supply — Tous droits réservés</span>
         <div class="footer-bottom-links">
           <a href="mentions-legales.html">Mentions légales</a>
           <a href="cgv.html">CGV</a>
-          <a href="politique-confidentialite.html">Confidentialité</a>
+          <a href="politique-confidentialite.html">Politique confidentialité</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <a href="https://wa.me/33157190714?text=Bonjour%20Partners%20Supply" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  <!-- ===== WHATSAPP FLOATING BUTTON ===== -->
+  <a href="https://wa.me/33157190714?text=Bonjour%20Partners%20Supply%2C%20je%20souhaite%20des%20informations." 
+     class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
   <script src="js/main.js"></script>
 </body>
 </html>

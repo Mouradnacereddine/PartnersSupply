@@ -10,60 +10,73 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-
   <!-- ===== HEADER ===== -->
   <header class="header" id="header">
     <div class="container">
-      <a href="index.html" class="header-logo"><img src="images/logos/logo_partners.png" alt="Partners Supply"><span>PARTNERS SUPPLY</span></a>
+      <a href="index.html" class="header-logo">
+        <img src="images/logos/logo_partners.png" alt="Partners Supply Logo">
+        <span>PARTNERS SUPPLY</span>
+      </a>
+
+      <!-- Desktop Navigation -->
       <nav class="nav-desktop">
-        <a href="index.html">Accueil</a>
-        <a href="a-propos.html">Qui sommes-nous</a>
+        <a href="index.html" class="nav-link" id="nav-accueil">Accueil</a>
+        <a href="a-propos.html" class="nav-link" id="nav-a-propos">Qui sommes-nous</a>
         <div class="dropdown">
-          <a href="#" class="active">Produits <i class="fas fa-chevron-down" style="font-size:0.7rem;margin-left:4px;"></i></a>
+          <a href="#" class="nav-link" id="nav-produits">Produits <i class="fas fa-chevron-down" style="font-size:0.7rem;margin-left:4px;"></i></a>
           <div class="dropdown-menu">
-            <a href="vehicules.html" class="active">🚗 Véhicules</a>
-            <a href="pieces-stellantis.html">⚙️ Pièces Stellantis</a>
-            <a href="equipements.html">🔧 Équipements</a>
-            <a href="minier.html">⛏️ Minier</a>
-            <a href="oil-gas.html">🛢️ Oil &amp; Gas</a>
+            <a href="vehicules.html">Véhicules</a>
+            <a href="pieces-stellantis.html">Pièces Stellantis</a>
+            <a href="equipements.html">Équipements</a>
+            <a href="minier.html">Équipements Miniers</a>
+            <a href="oil-gas.html">Oil &amp; Gas</a>
           </div>
         </div>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
+        <a href="services.html" class="nav-link" id="nav-services">Services</a>
+        <a href="contact.html" class="nav-link" id="nav-contact">Contact</a>
       </nav>
+
+      <!-- Language Switcher -->
       <div class="lang-switcher">
-        <a href="vehicules.html" class="active">FR</a>
-        <a href="en/vehicules.html">EN</a>
-        <a href="zh/vehicules.html">CN</a>
+        <a href="index.html" class="active" title="Français">FR</a>
+        <a href="en/index.html" title="English">EN</a>
+        <a href="zh/index.html" title="中文">CN</a>
       </div>
-      <a href="contact.html" class="btn btn-gold btn-sm header-cta"><i class="fas fa-paper-plane"></i> Devis rapide</a>
-      <button class="header-mobile-btn" id="mobileOpen"><i class="fas fa-bars"></i></button>
+
+      <!-- CTA -->
+      <a href="contact.html" class="btn btn-gold btn-sm header-cta">
+        <i class="fas fa-paper-plane"></i> Devis rapide
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button class="header-mobile-btn" id="mobileOpen" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
   </header>
 
   <!-- ===== MOBILE DRAWER ===== -->
   <div class="mobile-drawer-overlay" id="mobileOverlay"></div>
   <div class="mobile-drawer" id="mobileDrawer">
-    <button class="mobile-drawer-close" id="mobileClose">&times;</button>
+    <button class="mobile-drawer-close" id="mobileClose" aria-label="Fermer">&times;</button>
     <nav>
       <a href="index.html">Accueil</a>
       <a href="a-propos.html">Qui sommes-nous</a>
-      <a href="vehicules.html">🚗 Véhicules</a>
-      <a href="pieces-stellantis.html">⚙️ Pièces Stellantis</a>
-      <a href="equipements.html">🔧 Équipements</a>
-      <a href="minier.html">⛏️ Minier</a>
-      <a href="oil-gas.html">🛢️ Oil &amp; Gas</a>
+      <a href="vehicules.html">Véhicules</a>
+      <a href="pieces-stellantis.html">Pièces Stellantis</a>
+      <a href="equipements.html">Équipements</a>
+      <a href="minier.html">Équipements Miniers</a>
+      <a href="oil-gas.html">Oil &amp; Gas</a>
       <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
     </nav>
     <div class="lang-switcher">
-      <a href="vehicules.html" class="active">FR</a>
-      <a href="en/vehicules.html">EN</a>
-      <a href="zh/vehicules.html">CN</a>
+      <a href="index.html" class="active">FR</a>
+      <a href="en/index.html">EN</a>
+      <a href="zh/index.html">CN</a>
     </div>
   </div>
 
-  <!-- ===== PAGE HEADER ===== -->
   <section class="page-header">
     <div class="container">
       <h1>Véhicules</h1>
@@ -97,10 +110,10 @@
             <h3>PASSENGER</h3>
             <p>Véhicules particuliers toutes marques — berlines, breaks, citadines et monospaces.</p>
             <ul style="font-size:0.85rem;color:var(--text-light);line-height:2;margin-bottom:12px;">
-              <li>✅ Berlines (Peugeot 508, Citroën C5)</li>
-              <li>✅ Citadines (Fiat 500, Peugeot 208)</li>
-              <li>✅ Monospaces et breaks</li>
-              <li>✅ Véhicules premium (Alfa Romeo)</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Berlines (Peugeot 508, Citroën C5)</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Citadines (Fiat 500, Peugeot 208)</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Monospaces et breaks</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Véhicules premium (Alfa Romeo)</li>
             </ul>
             <a href="contact.html" class="btn btn-primary btn-sm">Devis <i class="fas fa-arrow-right"></i></a>
           </div>
@@ -112,10 +125,10 @@
             <h3>4X4</h3>
             <p>SUV et tout-terrain — Jeep, Land Cruiser, Patrol, Duster et toutes marques Stellantis.</p>
             <ul style="font-size:0.85rem;color:var(--text-light);line-height:2;margin-bottom:12px;">
-              <li>✅ Jeep Wrangler, Grand Cherokee</li>
-              <li>✅ 4x4 utilitaires et pick-up double cabine</li>
-              <li>✅ SUV Peugeot 3008/5008, Citroën C5 Aircross</li>
-              <li>✅ Véhicules tout-terrain renforcés</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Jeep Wrangler, Grand Cherokee</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> 4x4 utilitaires et pick-up double cabine</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> SUV Peugeot 3008/5008, Citroën C5 Aircross</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Véhicules tout-terrain renforcés</li>
             </ul>
             <a href="contact.html" class="btn btn-primary btn-sm">Devis <i class="fas fa-arrow-right"></i></a>
           </div>
@@ -127,10 +140,10 @@
             <h3>PICK-UP</h3>
             <p>Utilitaires avec benne — double cabine, plateau, ridelles. Idéal pour chantiers et exploitation.</p>
             <ul style="font-size:0.85rem;color:var(--text-light);line-height:2;margin-bottom:12px;">
-              <li>✅ Pick-up double cabine 4 places</li>
-              <li>✅ Plateau et ridelles aluminium</li>
-              <li>✅ Benne basculante et bâchée</li>
-              <li>✅ Marques Stellantis (Fiat Fullback, RAM)</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Pick-up double cabine 4 places</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Plateau et ridelles aluminium</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Benne basculante et bâchée</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Marques Stellantis (Fiat Fullback, RAM)</li>
             </ul>
             <a href="contact.html" class="btn btn-primary btn-sm">Devis <i class="fas fa-arrow-right"></i></a>
           </div>
@@ -142,10 +155,10 @@
             <h3>MINI BUS</h3>
             <p>Transports collectifs 9 à 16 places — navettes, transport scolaire, transport de personnel.</p>
             <ul style="font-size:0.85rem;color:var(--text-light);line-height:2;margin-bottom:12px;">
-              <li>✅ Mini bus 9 places (permis B)</li>
-              <li>✅ Navettes 16 places</li>
-              <li>✅ Transport scolaire et personnel</li>
-              <li>✅ Climatisation et confort long trajet</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Mini bus 9 places (permis B)</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Navettes 16 places</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Transport scolaire et personnel</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Climatisation et confort long trajet</li>
             </ul>
             <a href="contact.html" class="btn btn-primary btn-sm">Devis <i class="fas fa-arrow-right"></i></a>
           </div>
@@ -157,10 +170,10 @@
             <h3>CAMIONS</h3>
             <p>Poids lourds et utilitaires — porteurs, tracteurs, bennes, camions frigorifiques.</p>
             <ul style="font-size:0.85rem;color:var(--text-light);line-height:2;margin-bottom:12px;">
-              <li>✅ Porteurs 3,5 à 26 tonnes</li>
-              <li>✅ Tracteurs routiers et semi-remorques</li>
-              <li>✅ Bennes et camions frigorifiques</li>
-              <li>✅ Utilitaires Fiat Ducato, Peugeot Boxer</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Porteurs 3,5 à 26 tonnes</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Tracteurs routiers et semi-remorques</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Bennes et camions frigorifiques</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Utilitaires Fiat Ducato, Peugeot Boxer</li>
             </ul>
             <a href="contact.html" class="btn btn-primary btn-sm">Devis <i class="fas fa-arrow-right"></i></a>
           </div>
@@ -190,6 +203,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
+        <!-- Brand -->
         <div class="footer-brand">
           <img src="images/logos/logo_partners.png" alt="Partners Supply" style="filter:brightness(0) invert(1);height:36px;">
           <p>Bureau d'achats spécialisé dans la fourniture de pièces Stellantis, équipements industriels, miniers et Oil &amp; Gas. Basé à Paris — Présent en Afrique, Europe et Moyen-Orient.</p>
@@ -199,16 +213,20 @@
             <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
+
+        <!-- Produits -->
         <div>
           <h4>Produits</h4>
           <ul>
-            <li><a href="vehicules.html">🚗 Véhicules</a></li>
-            <li><a href="pieces-stellantis.html">⚙️ Pièces Stellantis</a></li>
-            <li><a href="equipements.html">🔧 Équipements</a></li>
-            <li><a href="minier.html">⛏️ Minier</a></li>
-            <li><a href="oil-gas.html">🛢️ Oil &amp; Gas</a></li>
+            <li><a href="vehicules.html">Véhicules</a></li>
+            <li><a href="pieces-stellantis.html">Pièces Stellantis</a></li>
+            <li><a href="equipements.html">Équipements</a></li>
+            <li><a href="minier.html">Minier</a></li>
+            <li><a href="oil-gas.html">Oil &amp; Gas</a></li>
           </ul>
         </div>
+
+        <!-- Services -->
         <div>
           <h4>Services</h4>
           <ul>
@@ -219,6 +237,8 @@
             <li><a href="contact.html">SAV</a></li>
           </ul>
         </div>
+
+        <!-- Contact -->
         <div>
           <h4>Contact</h4>
           <ul class="footer-contact">
@@ -229,6 +249,7 @@
           </ul>
         </div>
       </div>
+
       <div class="footer-bottom">
         <span>&copy; 2026 Partners Supply — Tous droits réservés</span>
         <div class="footer-bottom-links">
@@ -240,12 +261,15 @@
     </div>
   </footer>
 
+  
+
+  
+
   <!-- ===== WHATSAPP FLOATING BUTTON ===== -->
-  <a href="https://wa.me/33157190714?text=Bonjour%20Partners%20Supply%2C%20je%20souhaite%20des%20informations%20sur%20les%20v%C3%A9hicules."
+  <a href="https://wa.me/33157190714?text=Bonjour%20Partners%20Supply%2C%20je%20souhaite%20des%20informations." 
      class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
-
   <script src="js/main.js"></script>
 </body>
 </html>

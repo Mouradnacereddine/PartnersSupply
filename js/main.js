@@ -78,12 +78,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // --- Active Navigation Link ---
   const currentPath = window.location.pathname;
+  // Clear hardcoded active classes to let JS manage it cleanly
+  document.querySelectorAll('.nav-desktop a, .mobile-drawer nav a, .nav-desktop .dropdown > a').forEach(link => {
+    link.classList.remove('active');
+  });
+
+  let matched = false;
   document.querySelectorAll('.nav-desktop a, .mobile-drawer nav a').forEach(link => {
     const linkPath = link.getAttribute('href');
-    if (linkPath && currentPath.endsWith(linkPath)) {
+    if (linkPath && linkPath !== '#' && (currentPath.endsWith(linkPath) || (currentPath.endsWith('/') && linkPath === 'index.html'))) {
       link.classList.add('active');
+      matched = true;
+      // If inside dropdown-menu, also highlight the main products dropdown toggle
+      if (link.closest('.dropdown-menu')) {
+        const prodToggle = document.getElementById('nav-produits');
+        if (prodToggle) prodToggle.classList.add('active');
+      }
     }
   });
+
+  // Default to index.html if no match found and we are at root
+  if (!matched && (currentPath.endsWith('/') || currentPath === '')) {
+    const homeLink = document.getElementById('nav-accueil');
+    if (homeLink) homeLink.classList.add('active');
+  }
 
   // --- Counter Animation for Stats ---
   function animateCounter(element) {

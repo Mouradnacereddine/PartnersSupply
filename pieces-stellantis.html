@@ -10,53 +10,70 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+  <!-- ===== HEADER ===== -->
   <header class="header" id="header">
     <div class="container">
-      <a href="index.html" class="header-logo"><img src="images/logos/logo_partners.png" alt="Partners Supply"><span>PARTNERS SUPPLY</span></a>
+      <a href="index.html" class="header-logo">
+        <img src="images/logos/logo_partners.png" alt="Partners Supply Logo">
+        <span>PARTNERS SUPPLY</span>
+      </a>
+
+      <!-- Desktop Navigation -->
       <nav class="nav-desktop">
-        <a href="index.html">Accueil</a>
-        <a href="a-propos.html">Qui sommes-nous</a>
+        <a href="index.html" class="nav-link" id="nav-accueil">Accueil</a>
+        <a href="a-propos.html" class="nav-link" id="nav-a-propos">Qui sommes-nous</a>
         <div class="dropdown">
-          <a href="#" class="active">Produits <i class="fas fa-chevron-down" style="font-size:0.7rem;margin-left:4px;"></i></a>
+          <a href="#" class="nav-link" id="nav-produits">Produits <i class="fas fa-chevron-down" style="font-size:0.7rem;margin-left:4px;"></i></a>
           <div class="dropdown-menu">
-            <a href="vehicules.html">🚗 Véhicules</a>
-            <a href="pieces-stellantis.html">⚙️ Pièces Stellantis</a>
-            <a href="equipements.html">🔧 Équipements</a>
-            <a href="minier.html">⛏️ Minier</a>
-            <a href="oil-gas.html">🛢️ Oil &amp; Gas</a>
+            <a href="vehicules.html">Véhicules</a>
+            <a href="pieces-stellantis.html">Pièces Stellantis</a>
+            <a href="equipements.html">Équipements</a>
+            <a href="minier.html">Équipements Miniers</a>
+            <a href="oil-gas.html">Oil &amp; Gas</a>
           </div>
         </div>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
+        <a href="services.html" class="nav-link" id="nav-services">Services</a>
+        <a href="contact.html" class="nav-link" id="nav-contact">Contact</a>
       </nav>
+
+      <!-- Language Switcher -->
       <div class="lang-switcher">
-        <a href="pieces-stellantis.html" class="active">FR</a>
-        <a href="en/pieces-stellantis.html">EN</a>
-        <a href="zh/pieces-stellantis.html">CN</a>
+        <a href="index.html" class="active" title="Français">FR</a>
+        <a href="en/index.html" title="English">EN</a>
+        <a href="zh/index.html" title="中文">CN</a>
       </div>
-      <a href="contact.html" class="btn btn-gold btn-sm header-cta"><i class="fas fa-paper-plane"></i> Devis rapide</a>
-      <button class="header-mobile-btn" id="mobileOpen"><i class="fas fa-bars"></i></button>
+
+      <!-- CTA -->
+      <a href="contact.html" class="btn btn-gold btn-sm header-cta">
+        <i class="fas fa-paper-plane"></i> Devis rapide
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button class="header-mobile-btn" id="mobileOpen" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
   </header>
 
+  <!-- ===== MOBILE DRAWER ===== -->
   <div class="mobile-drawer-overlay" id="mobileOverlay"></div>
   <div class="mobile-drawer" id="mobileDrawer">
-    <button class="mobile-drawer-close" id="mobileClose">&times;</button>
+    <button class="mobile-drawer-close" id="mobileClose" aria-label="Fermer">&times;</button>
     <nav>
       <a href="index.html">Accueil</a>
       <a href="a-propos.html">Qui sommes-nous</a>
-      <a href="vehicules.html">🚗 Véhicules</a>
-      <a href="pieces-stellantis.html">⚙️ Pièces Stellantis</a>
-      <a href="equipements.html">🔧 Équipements</a>
-      <a href="minier.html">⛏️ Minier</a>
-      <a href="oil-gas.html">🛢️ Oil &amp; Gas</a>
+      <a href="vehicules.html">Véhicules</a>
+      <a href="pieces-stellantis.html">Pièces Stellantis</a>
+      <a href="equipements.html">Équipements</a>
+      <a href="minier.html">Équipements Miniers</a>
+      <a href="oil-gas.html">Oil &amp; Gas</a>
       <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
     </nav>
     <div class="lang-switcher">
-      <a href="pieces-stellantis.html" class="active">FR</a>
-      <a href="en/pieces-stellantis.html">EN</a>
-      <a href="zh/pieces-stellantis.html">CN</a>
+      <a href="index.html" class="active">FR</a>
+      <a href="en/index.html">EN</a>
+      <a href="zh/index.html">CN</a>
     </div>
   </div>
 
@@ -114,10 +131,10 @@
             <h3>Filtration</h3>
             <p>Filtres à huile, air, habitacle, carburant — toutes marques Stellantis</p>
             <ul style="font-size:0.85rem;color:var(--text-light);line-height:2;margin-bottom:12px;">
-              <li>✅ Filtres à huile</li>
-              <li>✅ Filtres à air</li>
-              <li>✅ Filtres habitacle</li>
-              <li>✅ Filtres à carburant</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Filtres à huile</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Filtres à air</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Filtres habitacle</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Filtres à carburant</li>
             </ul>
             <a href="contact.html" class="btn btn-primary btn-sm">Devis <i class="fas fa-arrow-right"></i></a>
           </div>
@@ -129,10 +146,10 @@
             <h3>Distribution</h3>
             <p>Courroies, chaînes, kits complets de distribution pour moteurs essence et diesel</p>
             <ul style="font-size:0.85rem;color:var(--text-light);line-height:2;margin-bottom:12px;">
-              <li>✅ Courroies de distribution</li>
-              <li>✅ Chaînes de distribution</li>
-              <li>✅ Kits complets (pompe, galets, courroie)</li>
-              <li>✅ Tendeurs et galets</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Courroies de distribution</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Chaînes de distribution</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Kits complets (pompe, galets, courroie)</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Tendeurs et galets</li>
             </ul>
             <a href="contact.html" class="btn btn-primary btn-sm">Devis <i class="fas fa-arrow-right"></i></a>
           </div>
@@ -144,10 +161,10 @@
             <h3>Freinage</h3>
             <p>Plaquettes, disques, tambours, maîtres-cylindres, étriers et accessoires</p>
             <ul style="font-size:0.85rem;color:var(--text-light);line-height:2;margin-bottom:12px;">
-              <li>✅ Plaquettes de frein avant/arrière</li>
-              <li>✅ Disques de frein</li>
-              <li>✅ Tambours et mâchoires</li>
-              <li>✅ Maîtres-cylindres et étriers</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Plaquettes de frein avant/arrière</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Disques de frein</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Tambours et mâchoires</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Maîtres-cylindres et étriers</li>
             </ul>
             <a href="contact.html" class="btn btn-primary btn-sm">Devis <i class="fas fa-arrow-right"></i></a>
           </div>
@@ -159,10 +176,10 @@
             <h3>Carrosserie</h3>
             <p>Rétroviseurs, optiques, pare-chocs, ailes, capots et pièces de tôlerie</p>
             <ul style="font-size:0.85rem;color:var(--text-light);line-height:2;margin-bottom:12px;">
-              <li>✅ Rétroviseurs électriques et manuels</li>
-              <li>✅ Optiques avant/arrière</li>
-              <li>✅ Pare-chocs et boucliers</li>
-              <li>✅ Ailes, capots, portières</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Rétroviseurs électriques et manuels</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Optiques avant/arrière</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Pare-chocs et boucliers</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Ailes, capots, portières</li>
             </ul>
             <a href="contact.html" class="btn btn-primary btn-sm">Devis <i class="fas fa-arrow-right"></i></a>
           </div>
@@ -174,10 +191,10 @@
             <h3>Accessoires</h3>
             <p>Bougies, balais d'essuie-glace, batteries, ampoules et consommables divers</p>
             <ul style="font-size:0.85rem;color:var(--text-light);line-height:2;margin-bottom:12px;">
-              <li>✅ Bougies d'allumage et préchauffage</li>
-              <li>✅ Balais d'essuie-glace</li>
-              <li>✅ Batteries 12V</li>
-              <li>✅ Ampoules et éclairage</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Bougies d'allumage et préchauffage</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Balais d'essuie-glace</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Batteries 12V</li>
+              <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Ampoules et éclairage</li>
             </ul>
             <a href="contact.html" class="btn btn-primary btn-sm">Devis <i class="fas fa-arrow-right"></i></a>
           </div>
@@ -196,7 +213,7 @@
       <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px;">
         <!-- Fiat -->
         <div class="value-card animate-on-scroll" style="border-left-color:var(--primary);text-align:center;padding:32px 24px;">
-          <div style="font-size:3rem;margin-bottom:12px;">🇮🇹</div>
+          <div style="font-size:3rem;margin-bottom:12px;color:var(--gold);"><i class="fas fa-flag"></i></div>
           <h3 style="color:var(--primary);">Fiat</h3>
           <p style="color:var(--text-light);font-size:0.9rem;line-height:1.7;">
             Pièces pour Fiat 500, Panda, Tipo, Ducato, Doblo, Scudo, Professional — toutes gammes.
@@ -204,7 +221,7 @@
         </div>
         <!-- Peugeot -->
         <div class="value-card animate-on-scroll animate-delay-1" style="border-left-color:var(--primary);text-align:center;padding:32px 24px;">
-          <div style="font-size:3rem;margin-bottom:12px;">🦁</div>
+          <div style="font-size:3rem;margin-bottom:12px;color:var(--gold);"><i class="fas fa-paw"></i></div>
           <h3 style="color:var(--primary);">Peugeot</h3>
           <p style="color:var(--text-light);font-size:0.9rem;line-height:1.7;">
             Pièces pour Peugeot 208, 308, 508, 3008, 5008, Partner, Boxer, Traveller.
@@ -212,7 +229,7 @@
         </div>
         <!-- Citroën -->
         <div class="value-card animate-on-scroll animate-delay-2" style="border-left-color:var(--primary);text-align:center;padding:32px 24px;">
-          <div style="font-size:3rem;margin-bottom:12px;">🚗</div>
+          <div style="font-size:3rem;margin-bottom:12px;color:var(--gold);"><i class="fas fa-car"></i></div>
           <h3 style="color:var(--primary);">Citroën</h3>
           <p style="color:var(--text-light);font-size:0.9rem;line-height:1.7;">
             Pièces pour Citroën C3, C4, C5, Berlingo, Jumpy, Jumper, SpaceTourer, AMI.
@@ -220,7 +237,7 @@
         </div>
         <!-- Opel -->
         <div class="value-card animate-on-scroll animate-delay-3" style="border-left-color:var(--primary);text-align:center;padding:32px 24px;">
-          <div style="font-size:3rem;margin-bottom:12px;">⚡</div>
+          <div style="font-size:3rem;margin-bottom:12px;color:var(--gold);"><i class="fas fa-bolt"></i></div>
           <h3 style="color:var(--primary);">Opel</h3>
           <p style="color:var(--text-light);font-size:0.9rem;line-height:1.7;">
             Pièces pour Opel Corsa, Astra, Mokka, Grandland, Vivaro, Movano, Combo.
@@ -228,7 +245,7 @@
         </div>
         <!-- Jeep -->
         <div class="value-card animate-on-scroll animate-delay-1" style="border-left-color:var(--primary);text-align:center;padding:32px 24px;">
-          <div style="font-size:3rem;margin-bottom:12px;">🏔️</div>
+          <div style="font-size:3rem;margin-bottom:12px;color:var(--gold);"><i class="fas fa-mountain"></i></div>
           <h3 style="color:var(--primary);">Jeep</h3>
           <p style="color:var(--text-light);font-size:0.9rem;line-height:1.7;">
             Pièces pour Jeep Wrangler, Grand Cherokee, Compass, Renegade, Gladiator.
@@ -236,7 +253,7 @@
         </div>
         <!-- Alfa Romeo -->
         <div class="value-card animate-on-scroll animate-delay-2" style="border-left-color:var(--primary);text-align:center;padding:32px 24px;">
-          <div style="font-size:3rem;margin-bottom:12px;">🏎️</div>
+          <div style="font-size:3rem;margin-bottom:12px;color:var(--gold);"><i class="fas fa-tachometer-alt"></i></div>
           <h3 style="color:var(--primary);">Alfa Romeo</h3>
           <p style="color:var(--text-light);font-size:0.9rem;line-height:1.7;">
             Pièces pour Alfa Romeo Giulia, Stelvio, Tonale, Giulietta, 4C.
@@ -244,7 +261,7 @@
         </div>
         <!-- Dodge RAM -->
         <div class="value-card animate-on-scroll animate-delay-3" style="border-left-color:var(--primary);text-align:center;padding:32px 24px;">
-          <div style="font-size:3rem;margin-bottom:12px;">🇺🇸</div>
+          <div style="font-size:3rem;margin-bottom:12px;color:var(--gold);"><i class="fas fa-globe"></i></div>
           <h3 style="color:var(--primary);">Dodge RAM</h3>
           <p style="color:var(--text-light);font-size:0.9rem;line-height:1.7;">
             Pièces pour RAM 1500, 2500, 3500, Dodge Durango, Charger, Challenger.
@@ -270,61 +287,73 @@
         </a>
       </div>
     </div>
-  </section>
-
+  </section><!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
+        <!-- Brand -->
         <div class="footer-brand">
           <img src="images/logos/logo_partners.png" alt="Partners Supply" style="filter:brightness(0) invert(1);height:36px;">
-          <p>Bureau d'achats spécialisé dans la fourniture de pièces Stellantis, équipements industriels, miniers et Oil &amp; Gas.</p>
+          <p>Bureau d'achats spécialisé dans la fourniture de pièces Stellantis, équipements industriels, miniers et Oil &amp; Gas. Basé à Paris — Présent en Afrique, Europe et Moyen-Orient.</p>
           <div class="footer-social">
             <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
             <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
+
+        <!-- Produits -->
         <div>
           <h4>Produits</h4>
           <ul>
-            <li><a href="vehicules.html">🚗 Véhicules</a></li>
-            <li><a href="pieces-stellantis.html">⚙️ Pièces Stellantis</a></li>
-            <li><a href="equipements.html">🔧 Équipements</a></li>
-            <li><a href="minier.html">⛏️ Minier</a></li>
-            <li><a href="oil-gas.html">🛢️ Oil &amp; Gas</a></li>
+            <li><a href="vehicules.html">Véhicules</a></li>
+            <li><a href="pieces-stellantis.html">Pièces Stellantis</a></li>
+            <li><a href="equipements.html">Équipements</a></li>
+            <li><a href="minier.html">Minier</a></li>
+            <li><a href="oil-gas.html">Oil &amp; Gas</a></li>
           </ul>
         </div>
+
+        <!-- Services -->
         <div>
           <h4>Services</h4>
           <ul>
             <li><a href="services.html">Supply Chain</a></li>
             <li><a href="services.html">Logistique</a></li>
             <li><a href="services.html">Expédition</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="services.html">Conseil technique</a></li>
+            <li><a href="contact.html">SAV</a></li>
           </ul>
         </div>
+
+        <!-- Contact -->
         <div>
           <h4>Contact</h4>
           <ul class="footer-contact">
-            <li><i class="fas fa-map-marker-alt"></i> 48-60 rue de l'Aubépine, Antony</li>
+            <li><i class="fas fa-map-marker-alt"></i> 48-60 rue de l'Aubépine, Antony, France</li>
             <li><i class="fas fa-phone"></i> +33 (0)1 57 19 07 14</li>
             <li><i class="fas fa-envelope"></i> infos@partners-supply.com</li>
             <li><i class="fas fa-globe"></i> www.partners-supply.com</li>
           </ul>
         </div>
       </div>
+
       <div class="footer-bottom">
         <span>&copy; 2026 Partners Supply — Tous droits réservés</span>
         <div class="footer-bottom-links">
           <a href="mentions-legales.html">Mentions légales</a>
           <a href="cgv.html">CGV</a>
-          <a href="politique-confidentialite.html">Confidentialité</a>
+          <a href="politique-confidentialite.html">Politique confidentialité</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <a href="https://wa.me/33157190714?text=Bonjour%20Partners%20Supply" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  <!-- ===== WHATSAPP FLOATING BUTTON ===== -->
+  <a href="https://wa.me/33157190714?text=Bonjour%20Partners%20Supply%2C%20je%20souhaite%20des%20informations." 
+     class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
   <script src="js/main.js"></script>
 </body>
 </html>

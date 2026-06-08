@@ -10,53 +10,70 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+  <!-- ===== HEADER ===== -->
   <header class="header" id="header">
     <div class="container">
-      <a href="index.html" class="header-logo"><img src="images/logos/logo_partners.png" alt="Partners Supply"><span>PARTNERS SUPPLY</span></a>
+      <a href="index.html" class="header-logo">
+        <img src="images/logos/logo_partners.png" alt="Partners Supply Logo">
+        <span>PARTNERS SUPPLY</span>
+      </a>
+
+      <!-- Desktop Navigation -->
       <nav class="nav-desktop">
-        <a href="index.html">Accueil</a>
-        <a href="a-propos.html">Qui sommes-nous</a>
+        <a href="index.html" class="nav-link" id="nav-accueil">Accueil</a>
+        <a href="a-propos.html" class="nav-link" id="nav-a-propos">Qui sommes-nous</a>
         <div class="dropdown">
-          <a href="#">Produits <i class="fas fa-chevron-down" style="font-size:0.7rem;margin-left:4px;"></i></a>
+          <a href="#" class="nav-link" id="nav-produits">Produits <i class="fas fa-chevron-down" style="font-size:0.7rem;margin-left:4px;"></i></a>
           <div class="dropdown-menu">
-            <a href="vehicules.html">🚗 Véhicules</a>
-            <a href="pieces-stellantis.html">⚙️ Pièces Stellantis</a>
-            <a href="equipements.html">🔧 Équipements</a>
-            <a href="minier.html">⛏️ Minier</a>
-            <a href="oil-gas.html">🛢️ Oil &amp; Gas</a>
+            <a href="vehicules.html">Véhicules</a>
+            <a href="pieces-stellantis.html">Pièces Stellantis</a>
+            <a href="equipements.html">Équipements</a>
+            <a href="minier.html">Équipements Miniers</a>
+            <a href="oil-gas.html">Oil &amp; Gas</a>
           </div>
         </div>
-        <a href="services.html" class="active">Services</a>
-        <a href="contact.html">Contact</a>
+        <a href="services.html" class="nav-link" id="nav-services" class="active">Services</a>
+        <a href="contact.html" class="nav-link" id="nav-contact">Contact</a>
       </nav>
+
+      <!-- Language Switcher -->
       <div class="lang-switcher">
-        <a href="services.html" class="active">FR</a>
-        <a href="en/services.html">EN</a>
-        <a href="zh/services.html">CN</a>
+        <a href="index.html" class="active" title="Français">FR</a>
+        <a href="en/index.html" title="English">EN</a>
+        <a href="zh/index.html" title="中文">CN</a>
       </div>
-      <a href="contact.html" class="btn btn-gold btn-sm header-cta"><i class="fas fa-paper-plane"></i> Devis rapide</a>
-      <button class="header-mobile-btn" id="mobileOpen"><i class="fas fa-bars"></i></button>
+
+      <!-- CTA -->
+      <a href="contact.html" class="btn btn-gold btn-sm header-cta">
+        <i class="fas fa-paper-plane"></i> Devis rapide
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button class="header-mobile-btn" id="mobileOpen" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
   </header>
 
+  <!-- ===== MOBILE DRAWER ===== -->
   <div class="mobile-drawer-overlay" id="mobileOverlay"></div>
   <div class="mobile-drawer" id="mobileDrawer">
-    <button class="mobile-drawer-close" id="mobileClose">&times;</button>
+    <button class="mobile-drawer-close" id="mobileClose" aria-label="Fermer">&times;</button>
     <nav>
       <a href="index.html">Accueil</a>
       <a href="a-propos.html">Qui sommes-nous</a>
-      <a href="vehicules.html">🚗 Véhicules</a>
-      <a href="pieces-stellantis.html">⚙️ Pièces Stellantis</a>
-      <a href="equipements.html">🔧 Équipements</a>
-      <a href="minier.html">⛏️ Minier</a>
-      <a href="oil-gas.html">🛢️ Oil &amp; Gas</a>
+      <a href="vehicules.html">Véhicules</a>
+      <a href="pieces-stellantis.html">Pièces Stellantis</a>
+      <a href="equipements.html">Équipements</a>
+      <a href="minier.html">Équipements Miniers</a>
+      <a href="oil-gas.html">Oil &amp; Gas</a>
       <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
     </nav>
     <div class="lang-switcher">
-      <a href="services.html" class="active">FR</a>
-      <a href="en/services.html">EN</a>
-      <a href="zh/services.html">CN</a>
+      <a href="index.html" class="active">FR</a>
+      <a href="en/index.html">EN</a>
+      <a href="zh/index.html">CN</a>
     </div>
   </div>
 
@@ -72,46 +89,61 @@
 
   <section class="section">
     <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1.2fr;gap:40px;align-items:center;margin-bottom:60px;" class="animate-on-scroll">
+        <div>
+          <h2 style="font-size:2rem;color:var(--primary);margin-bottom:20px;">Des solutions d'approvisionnement adaptées et intégrées</h2>
+          <p style="color:var(--text-light);font-size:1.05rem;line-height:1.8;margin-bottom:1.5rem;">
+            Depuis sa création en 2006, Partners Supply s'impose comme un facilitateur majeur de vos flux de marchandises à l'international. Nous structurons l'intégralité de la chaîne d'approvisionnement pour sécuriser vos acquisitions industrielles, minières, et de pièces détachées.
+          </p>
+          <p style="color:var(--text-light);font-size:1.05rem;line-height:1.8;">
+            Notre double implantation européenne et africaine nous permet de répondre avec réactivité et flexibilité aux cahiers des charges les plus exigeants, tout en assurant un contrôle rigoureux de la qualité à chaque étape.
+          </p>
+        </div>
+        <div>
+          <img src="images/illustrations/services-logistics.svg" alt="Partners Supply Logistics System" style="width:100%;height:auto;border-radius:12px;box-shadow:var(--shadow-lg);">
+        </div>
+      </div>
+
       <div class="services-grid">
         <div class="value-card animate-on-scroll" style="border-left-color:var(--primary);">
-          <div style="font-size:2.5rem;margin-bottom:16px;">📦</div>
+          <div style="font-size:2.5rem;margin-bottom:16px;color:var(--gold);"><i class="fas fa-box"></i></div>
           <h3 style="color:var(--primary);">Supply Chain</h3>
           <p style="color:var(--text-light);line-height:1.7;">
             Forte de son expérience de l'approvisionnement et de la logistique principalement en Afrique et en Europe, 
             notre équipe assure la livraison depuis la source d'approvisionnement jusqu'au site d'exploitation ou d'utilisation.
           </p>
           <ul style="margin-top:16px;color:var(--text-light);font-size:0.9rem;line-height:2;">
-            <li>✅ Consolidation des commandes</li>
-            <li>✅ Optimisation des coûts d'expédition</li>
-            <li>✅ Réduction des coûts d'opération</li>
-            <li>✅ Satisfaction client (gagnant/gagnant)</li>
+            <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Consolidation des commandes</li>
+            <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Optimisation des coûts d'expédition</li>
+            <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Réduction des coûts d'opération</li>
+            <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Satisfaction client (gagnant/gagnant)</li>
           </ul>
         </div>
         <div class="value-card animate-on-scroll animate-delay-1" style="border-left-color:var(--primary);">
-          <div style="font-size:2.5rem;margin-bottom:16px;">🚚</div>
+          <div style="font-size:2.5rem;margin-bottom:16px;color:var(--gold);"><i class="fas fa-truck"></i></div>
           <h3 style="color:var(--primary);">Logistique</h3>
           <p style="color:var(--text-light);line-height:1.7;">
             Nous respectons nos engagements et assurons les livraisons chez nos clients dans le respect des délais, 
             de la qualité et des prix convenus.
           </p>
           <ul style="margin-top:16px;color:var(--text-light);font-size:0.9rem;line-height:2;">
-            <li>✅ Contrôle marchandise avant expédition</li>
-            <li>✅ Tableau de suivi des commandes</li>
-            <li>✅ Suivi en temps réel de l'acheminement</li>
-            <li>✅ Réduction des risques d'erreur</li>
+            <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Contrôle marchandise avant expédition</li>
+            <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Tableau de suivi des commandes</li>
+            <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Suivi en temps réel de l'acheminement</li>
+            <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Réduction des risques d'erreur</li>
           </ul>
         </div>
         <div class="value-card animate-on-scroll animate-delay-2" style="border-left-color:var(--primary);">
-          <div style="font-size:2.5rem;margin-bottom:16px;">🚢</div>
+          <div style="font-size:2.5rem;margin-bottom:16px;color:var(--gold);"><i class="fas fa-ship"></i></div>
           <h3 style="color:var(--primary);">Expédition</h3>
           <p style="color:var(--text-light);line-height:1.7;">
             Une grande expérience du contrôle de l'emballage et de l'empotage en container complet et/ou de groupage.
           </p>
           <ul style="margin-top:16px;color:var(--text-light);font-size:0.9rem;line-height:2;">
-            <li>✅ Partenariat transporteurs internationaux</li>
-            <li>✅ Envois aériens, routiers &amp; maritimes</li>
-            <li>✅ Habilitations Cotecna, SGS, SOCOTEC, Veritas</li>
-            <li>✅ Container complet ou groupage</li>
+            <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Partenariat transporteurs internationaux</li>
+            <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Envois aériens, routiers &amp; maritimes</li>
+            <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Habilitations Cotecna, SGS, SOCOTEC, Veritas</li>
+            <li><i class="fas fa-check text-gold" style="margin-right:8px;"></i> Container complet ou groupage</li>
           </ul>
         </div>
       </div>
@@ -154,61 +186,73 @@
       <p style="color:rgba(255,255,255,0.7);margin-bottom:2rem;" class="animate-on-scroll">Parlez-nous de votre projet</p>
       <a href="contact.html" class="btn btn-gold animate-on-scroll"><i class="fas fa-paper-plane"></i> Contactez-nous</a>
     </div>
-  </section>
-
+  </section><!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
+        <!-- Brand -->
         <div class="footer-brand">
           <img src="images/logos/logo_partners.png" alt="Partners Supply" style="filter:brightness(0) invert(1);height:36px;">
-          <p>Bureau d'achats spécialisé dans la fourniture de pièces Stellantis, équipements industriels, miniers et Oil &amp; Gas.</p>
+          <p>Bureau d'achats spécialisé dans la fourniture de pièces Stellantis, équipements industriels, miniers et Oil &amp; Gas. Basé à Paris — Présent en Afrique, Europe et Moyen-Orient.</p>
           <div class="footer-social">
             <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
             <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
+
+        <!-- Produits -->
         <div>
           <h4>Produits</h4>
           <ul>
-            <li><a href="vehicules.html">🚗 Véhicules</a></li>
-            <li><a href="pieces-stellantis.html">⚙️ Pièces Stellantis</a></li>
-            <li><a href="equipements.html">🔧 Équipements</a></li>
-            <li><a href="minier.html">⛏️ Minier</a></li>
-            <li><a href="oil-gas.html">🛢️ Oil &amp; Gas</a></li>
+            <li><a href="vehicules.html">Véhicules</a></li>
+            <li><a href="pieces-stellantis.html">Pièces Stellantis</a></li>
+            <li><a href="equipements.html">Équipements</a></li>
+            <li><a href="minier.html">Minier</a></li>
+            <li><a href="oil-gas.html">Oil &amp; Gas</a></li>
           </ul>
         </div>
+
+        <!-- Services -->
         <div>
           <h4>Services</h4>
           <ul>
             <li><a href="services.html">Supply Chain</a></li>
             <li><a href="services.html">Logistique</a></li>
             <li><a href="services.html">Expédition</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="services.html">Conseil technique</a></li>
+            <li><a href="contact.html">SAV</a></li>
           </ul>
         </div>
+
+        <!-- Contact -->
         <div>
           <h4>Contact</h4>
           <ul class="footer-contact">
-            <li><i class="fas fa-map-marker-alt"></i> 48-60 rue de l'Aubépine, Antony</li>
+            <li><i class="fas fa-map-marker-alt"></i> 48-60 rue de l'Aubépine, Antony, France</li>
             <li><i class="fas fa-phone"></i> +33 (0)1 57 19 07 14</li>
             <li><i class="fas fa-envelope"></i> infos@partners-supply.com</li>
             <li><i class="fas fa-globe"></i> www.partners-supply.com</li>
           </ul>
         </div>
       </div>
+
       <div class="footer-bottom">
         <span>&copy; 2026 Partners Supply — Tous droits réservés</span>
         <div class="footer-bottom-links">
           <a href="mentions-legales.html">Mentions légales</a>
           <a href="cgv.html">CGV</a>
-          <a href="politique-confidentialite.html">Confidentialité</a>
+          <a href="politique-confidentialite.html">Politique confidentialité</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <a href="https://wa.me/33157190714?text=Bonjour%20Partners%20Supply" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  <!-- ===== WHATSAPP FLOATING BUTTON ===== -->
+  <a href="https://wa.me/33157190714?text=Bonjour%20Partners%20Supply%2C%20je%20souhaite%20des%20informations." 
+     class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
   <script src="js/main.js"></script>
 </body>
 </html>

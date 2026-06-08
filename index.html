@@ -30,7 +30,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-
   <!-- ===== HEADER ===== -->
   <header class="header" id="header">
     <div class="container">
@@ -41,20 +40,20 @@
 
       <!-- Desktop Navigation -->
       <nav class="nav-desktop">
-        <a href="index.html" class="active">Accueil</a>
-        <a href="a-propos.html">Qui sommes-nous</a>
+        <a href="index.html" class="nav-link" id="nav-accueil">Accueil</a>
+        <a href="a-propos.html" class="nav-link" id="nav-a-propos">Qui sommes-nous</a>
         <div class="dropdown">
-          <a href="#">Produits <i class="fas fa-chevron-down" style="font-size:0.7rem;margin-left:4px;"></i></a>
+          <a href="#" class="nav-link" id="nav-produits">Produits <i class="fas fa-chevron-down" style="font-size:0.7rem;margin-left:4px;"></i></a>
           <div class="dropdown-menu">
-            <a href="vehicules.html">🚗 Véhicules</a>
-            <a href="pieces-stellantis.html">⚙️ Pièces Stellantis</a>
-            <a href="equipements.html">🔧 Équipements</a>
-            <a href="minier.html">⛏️ Équipements Miniers</a>
-            <a href="oil-gas.html">🛢️ Oil &amp; Gas</a>
+            <a href="vehicules.html">Véhicules</a>
+            <a href="pieces-stellantis.html">Pièces Stellantis</a>
+            <a href="equipements.html">Équipements</a>
+            <a href="minier.html">Équipements Miniers</a>
+            <a href="oil-gas.html">Oil &amp; Gas</a>
           </div>
         </div>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
+        <a href="services.html" class="nav-link" id="nav-services">Services</a>
+        <a href="contact.html" class="nav-link" id="nav-contact">Contact</a>
       </nav>
 
       <!-- Language Switcher -->
@@ -83,11 +82,11 @@
     <nav>
       <a href="index.html">Accueil</a>
       <a href="a-propos.html">Qui sommes-nous</a>
-      <a href="vehicules.html">🚗 Véhicules</a>
-      <a href="pieces-stellantis.html">⚙️ Pièces Stellantis</a>
-      <a href="equipements.html">🔧 Équipements</a>
-      <a href="minier.html">⛏️ Équipements Miniers</a>
-      <a href="oil-gas.html">🛢️ Oil &amp; Gas</a>
+      <a href="vehicules.html">Véhicules</a>
+      <a href="pieces-stellantis.html">Pièces Stellantis</a>
+      <a href="equipements.html">Équipements</a>
+      <a href="minier.html">Équipements Miniers</a>
+      <a href="oil-gas.html">Oil &amp; Gas</a>
       <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
     </nav>
@@ -98,7 +97,6 @@
     </div>
   </div>
 
-  <!-- ===== HERO SECTION ===== -->
   <section class="hero">
     <div class="container">
       <div class="hero-content">
@@ -150,27 +148,27 @@
       </div>
       <div class="pillars-grid">
         <a href="vehicules.html" class="pillar-card animate-on-scroll">
-          <div class="pillar-icon">🚗</div>
+          <div class="pillar-icon"><i class="fas fa-car" style="color:var(--gold);"></i></div>
           <h3>Véhicules</h3>
           <p>Passenger, 4x4, Pick-up, Mini Bus, Camions — neufs et occasions</p>
         </a>
         <a href="equipements.html" class="pillar-card animate-on-scroll animate-delay-1">
-          <div class="pillar-icon">🔧</div>
+          <div class="pillar-icon"><i class="fas fa-tools" style="color:var(--gold);"></i></div>
           <h3>Équipements</h3>
           <p>Bulldozer, Pelle, Grue, Groupe électrogène, Outillage…</p>
         </a>
         <a href="pieces-stellantis.html" class="pillar-card animate-on-scroll animate-delay-2">
-          <div class="pillar-icon">⚙️</div>
+          <div class="pillar-icon"><i class="fas fa-cogs" style="color:var(--gold);"></i></div>
           <h3>Pièces Stellantis</h3>
           <p>Filtration, Freinage, Distribution, Carrosserie — toutes marques</p>
         </a>
         <a href="minier.html" class="pillar-card animate-on-scroll animate-delay-3">
-          <div class="pillar-icon">⛏️</div>
+          <div class="pillar-icon"><i class="fas fa-hard-hat" style="color:var(--gold);"></i></div>
           <h3>Équipements Miniers</h3>
           <p>Foration, Concassage, Convoyage, Laboratoire, Protection</p>
         </a>
         <a href="oil-gas.html" class="pillar-card animate-on-scroll animate-delay-4">
-          <div class="pillar-icon">🛢️</div>
+          <div class="pillar-icon"><i class="fas fa-oil-can" style="color:var(--gold);"></i></div>
           <h3>Oil &amp; Gas</h3>
           <p>Tubes, Vannes, Pompes, Instrumentation, Anti-incendie</p>
         </a>
@@ -203,22 +201,22 @@
       <!-- Features Strip -->
       <div style="margin-top:60px;" class="features-strip">
         <div class="feature-item animate-on-scroll">
-          <div class="feature-icon">🌍</div>
+          <div class="feature-icon"><i class="fas fa-globe-americas" style="color:var(--gold);"></i></div>
           <h4>Perspective internationale</h4>
           <p>Clients en Afrique, Europe et Moyen-Orient</p>
         </div>
         <div class="feature-item animate-on-scroll animate-delay-1">
-          <div class="feature-icon">🤝</div>
+          <div class="feature-icon"><i class="fas fa-handshake" style="color:var(--gold);"></i></div>
           <h4>Partenaires Stellantis</h4>
           <p>Fiat, Peugeot, Citroën, Opel, Jeep, Alfa Romeo, RAM</p>
         </div>
         <div class="feature-item animate-on-scroll animate-delay-2">
-          <div class="feature-icon">📦</div>
+          <div class="feature-icon"><i class="fas fa-box" style="color:var(--gold);"></i></div>
           <h4>Logistique intégrée</h4>
           <p>Groupage, consolidation, suivi en temps réel</p>
         </div>
         <div class="feature-item animate-on-scroll animate-delay-3">
-          <div class="feature-icon">✅</div>
+          <div class="feature-icon"><i class="fas fa-check-circle" style="color:var(--gold);"></i></div>
           <h4>Qualité &amp; Conformité</h4>
           <p>Contrôle SGS, Cotecna, SOCOTEC, Veritas</p>
         </div>
@@ -263,11 +261,11 @@
         <div>
           <h4>Produits</h4>
           <ul>
-            <li><a href="vehicules.html">🚗 Véhicules</a></li>
-            <li><a href="pieces-stellantis.html">⚙️ Pièces Stellantis</a></li>
-            <li><a href="equipements.html">🔧 Équipements</a></li>
-            <li><a href="minier.html">⛏️ Minier</a></li>
-            <li><a href="oil-gas.html">🛢️ Oil &amp; Gas</a></li>
+            <li><a href="vehicules.html">Véhicules</a></li>
+            <li><a href="pieces-stellantis.html">Pièces Stellantis</a></li>
+            <li><a href="equipements.html">Équipements</a></li>
+            <li><a href="minier.html">Minier</a></li>
+            <li><a href="oil-gas.html">Oil &amp; Gas</a></li>
           </ul>
         </div>
 
@@ -306,13 +304,16 @@
     </div>
   </footer>
 
+  
+
+  
+
+  <!-- Scripts -->
   <!-- ===== WHATSAPP FLOATING BUTTON ===== -->
   <a href="https://wa.me/33157190714?text=Bonjour%20Partners%20Supply%2C%20je%20souhaite%20des%20informations." 
      class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
-
-  <!-- Scripts -->
   <script src="js/main.js"></script>
 </body>
 </html>
