@@ -393,6 +393,16 @@ h4 { font-size: 1.25rem; }
 }
 
 /* --- HERO SECTION --- */
+/* Animation slow-zoom sur l'image de fond pour remplacer l'effet parallaxe */
+@keyframes hero-zoom {
+  0% {
+    background-size: auto, 100% auto;
+  }
+  100% {
+    background-size: auto, 110% auto;
+  }
+}
+
 .hero {
   display: flex;
   align-items: center;
@@ -412,6 +422,9 @@ h4 { font-size: 1.25rem; }
   background-position: center, center 72px;
   background-repeat: no-repeat;
   background-blend-mode: normal;
+
+  /* Animation lente et continue pour une impression de mouvement doux */
+  animation: hero-zoom 25s ease-in-out infinite alternate;
 }
 
 /* Overlay foncé renforcé pour lisibilité du texte sur l'image */
@@ -446,7 +459,9 @@ h4 { font-size: 1.25rem; }
 }
 
 .hero-content {
-  max-width: 650px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
   position: relative;
   z-index: 2;
 }
@@ -479,6 +494,7 @@ h4 { font-size: 1.25rem; }
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* --- STATS BAR (séparée du hero) --- */
