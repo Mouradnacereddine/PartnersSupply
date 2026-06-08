@@ -411,19 +411,27 @@ h4 { font-size: 1.25rem; }
   overflow: hidden;
   padding: 72px 0 0;
   min-height: max(100vh, calc(100vw * 1024 / 1536));
+  background: #0d0d14;
+  transform: translateZ(0); /* permet à overflow:hidden de clipper les enfants fixed */
+}
 
-  /* Image de fond : contain => entièrement visible (haut ET bas), pas rognée */
+/* Arrière-plan fixe avec parallaxe : l'image reste en place pendant le défilement */
+.hero-bg {
+  position: fixed;
+  top: 72px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 72px);
+  z-index: 0;
+  pointer-events: none;
   background: #0d0d14;
   background-image:
     /* Vignette latérale pour fondre les bords de l'image dans le fond sombre */
     linear-gradient(to right, #0d0d14 0%, transparent 12%, transparent 88%, #0d0d14 100%),
     url('../images/hero/hero-bg.png');
   background-size: auto, contain;
-  background-position: center, center 72px;
+  background-position: center, center;
   background-repeat: no-repeat;
-  background-blend-mode: normal;
-
-  /* Animation lente et continue pour une impression de mouvement doux */
   animation: hero-zoom 25s ease-in-out infinite alternate;
 }
 
