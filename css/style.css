@@ -392,27 +392,15 @@ h4 { font-size: 1.25rem; }
   margin-left: 0;
 }
 
-/* --- HERO SECTION — same background as page-header --- */
+/* --- HERO SECTION --- */
 .hero {
   display: flex;
   align-items: center;
   color: white;
   position: relative;
   overflow: hidden;
-  padding-top: 80px;
-  background: #0d0d14; /* fallback si la vidéo ne charge pas */
-}
-
-/* Vidéo de fond — commence sous la barre header (72px) */
-.hero-video {
-  position: absolute;
-  top: 72px;
-  left: 0;
-  width: 100%;
-  height: calc(100% - 72px);
-  object-fit: cover;
-  object-position: center bottom;
-  z-index: 0;
+  padding: 80px 0;
+  background: #0d0d14;
 }
 
 .hero-content {
