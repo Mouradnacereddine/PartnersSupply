@@ -394,14 +394,14 @@ h4 { font-size: 1.25rem; }
 
 /* --- HERO SECTION — same background as page-header --- */
 .hero {
-  min-height: 75vh;
+  min-height: 65vh;
   display: flex;
   align-items: center;
   color: white;
   position: relative;
   overflow: hidden;
   padding-top: 80px;
-  background: #0d0d14 url('../images/hero/page-header-bg.png') center center / contain no-repeat;
+  background: #0d0d14 url('../images/hero/page-header-bg.png') center center / cover no-repeat;
 }
 
 /* No carousel, no overlay, no hero-bg.svg — single image background */
@@ -808,7 +808,7 @@ h4 { font-size: 1.25rem; }
   overflow: hidden;
   color: white;
   text-align: center;
-  background: #0d0d14 url('../images/hero/page-header-bg.png') center center / contain no-repeat;
+  background: #0d0d14 url('../images/hero/page-header-bg.png') center center / cover no-repeat;
 }
 /* Pas de ::before ni ::after — l'image fait tout */
 .page-header h1 {
