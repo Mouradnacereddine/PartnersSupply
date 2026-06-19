@@ -29,18 +29,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // --- Scroll Header Effect ---
   const header = document.querySelector('.header');
-  let lastScroll = 0;
 
   window.addEventListener('scroll', function() {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll > 100) {
-      header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+    if (window.pageYOffset > 40) {
+      header.classList.add('scrolled');
     } else {
-      header.style.boxShadow = 'none';
+      header.classList.remove('scrolled');
     }
-    
-    lastScroll = currentScroll;
   });
 
   // --- Scroll Animations (Intersection Observer) ---
