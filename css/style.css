@@ -205,20 +205,20 @@ h4 { font-size: 1.25rem; }
   font-size: 0.875rem;
 }
 
-/* --- HEADER / NAVIGATION (Modernisé) --- */
+/* --- HEADER / NAVIGATION (V3 — Dark Premium) --- */
 .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: #ffffff;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
-  box-shadow: 0 1px 0 rgba(0,0,0,0.04);
-  transition: box-shadow 0.3s ease, background 0.3s ease;
+  background: rgba(13, 13, 20, 0.92);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 .header.scrolled {
-  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  background: rgba(13, 13, 20, 0.98);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.30);
 }
 
 .header .container {
@@ -240,13 +240,14 @@ h4 { font-size: 1.25rem; }
 .header-logo img {
   height: 38px;
   width: auto;
+  filter: brightness(0) invert(1);
   transition: opacity 0.2s ease;
 }
-.header-logo:hover img { opacity: 0.85; }
+.header-logo:hover img { opacity: 0.8; }
 .header-logo span {
   font-family: var(--font-display);
   font-size: 1.3rem;
-  color: var(--primary);
+  color: #ffffff;
   letter-spacing: 1px;
   white-space: nowrap;
 }
@@ -259,7 +260,7 @@ h4 { font-size: 1.25rem; }
 }
 .nav-desktop a {
   position: relative;
-  color: #4a5568;
+  color: rgba(255, 255, 255, 0.75);
   font-weight: 500;
   font-size: 0.875rem;
   padding: 8px 14px;
@@ -280,9 +281,9 @@ h4 { font-size: 1.25rem; }
   transform: scaleX(0);
   transition: transform 0.25s ease;
 }
-.nav-desktop a:hover { color: var(--primary); }
+.nav-desktop a:hover { color: #ffffff; }
 .nav-desktop a:hover::after { transform: scaleX(1); }
-.nav-desktop a.active { color: var(--primary); font-weight: 600; }
+.nav-desktop a.active { color: var(--gold); font-weight: 600; }
 .nav-desktop a.active::after { transform: scaleX(1); }
 
 /* Dropdown */
@@ -291,10 +292,10 @@ h4 { font-size: 1.25rem; }
   position: absolute;
   top: calc(100% + 8px);
   left: 0;
-  background: #fff;
+  background: #1a1a25;
   min-width: 210px;
   border-radius: 10px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.10), 0 0 0 1px rgba(0,0,0,0.04);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.30), 0 0 0 1px rgba(255,255,255,0.04);
   padding: 6px;
   opacity: 0;
   visibility: hidden;
@@ -314,7 +315,7 @@ h4 { font-size: 1.25rem; }
   padding: 9px 14px;
   border-radius: 7px;
   font-size: 0.85rem;
-  color: #4a5568;
+  color: rgba(255, 255, 255, 0.7);
   font-weight: 500;
   transition: background 0.15s ease, color 0.15s ease;
 }
@@ -329,18 +330,18 @@ h4 { font-size: 1.25rem; }
   transition: opacity 0.15s ease;
 }
 .dropdown-menu a:hover {
-  background: #f7f8fa;
-  color: var(--primary);
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
 }
 .dropdown-menu a:hover::before { opacity: 1; }
 
-/* Language Switcher — pill moderne avec drapeaux */
+/* Language Switcher — pill dark */
 .lang-switcher {
   display: flex;
   align-items: center;
   gap: 2px;
   margin-left: 10px;
-  background: #f4f5f7;
+  background: rgba(255, 255, 255, 0.08);
   border-radius: 20px;
   padding: 3px;
   flex-shrink: 0;
@@ -354,7 +355,7 @@ h4 { font-size: 1.25rem; }
   font-weight: 700;
   letter-spacing: 0.04em;
   border-radius: 16px;
-  color: #718096;
+  color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
   transition: all 0.2s ease;
   white-space: nowrap;
@@ -364,20 +365,20 @@ h4 { font-size: 1.25rem; }
   line-height: 1;
 }
 .lang-switcher a:hover {
-  color: var(--primary);
-  background: rgba(255,255,255,0.8);
+  color: #ffffff;
+  background: rgba(255,255,255,0.1);
 }
 .lang-switcher a.active {
-  background: #ffffff;
-  color: var(--primary);
-  box-shadow: 0 1px 4px rgba(0,0,0,0.10);
+  background: rgba(255,255,255,0.15);
+  color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.20);
 }
 
 /* Mobile drawer lang-switcher */
 .mobile-drawer .lang-switcher {
   margin-top: 20px;
   margin-left: 0;
-  background: #f4f5f7;
+  background: rgba(255,255,255,0.06);
   display: inline-flex;
 }
 
@@ -391,16 +392,16 @@ h4 { font-size: 1.25rem; }
 .header-mobile-btn {
   display: none;
   background: none;
-  border: 1px solid rgba(0,0,0,0.10);
+  border: 1px solid rgba(255,255,255,0.15);
   border-radius: 8px;
   font-size: 1.2rem;
-  color: var(--primary);
+  color: #ffffff;
   cursor: pointer;
   padding: 7px 10px;
   transition: background 0.2s ease;
 }
 .header-mobile-btn:hover {
-  background: var(--gray-100);
+  background: rgba(255,255,255,0.1);
 }
 
 /* --- MOBILE DRAWER --- */
@@ -410,7 +411,7 @@ h4 { font-size: 1.25rem; }
   right: -100%;
   width: 300px;
   height: 100vh;
-  background: white;
+  background: #15151f;
   z-index: 2000;
   padding: 24px;
   box-shadow: -5px 0 30px rgba(0,0,0,0.15);
@@ -440,7 +441,7 @@ h4 { font-size: 1.25rem; }
   background: none;
   border: none;
   font-size: 1.5rem;
-  color: var(--text-dark);
+  color: rgba(255,255,255,0.5);
   cursor: pointer;
   float: right;
 }
@@ -450,12 +451,12 @@ h4 { font-size: 1.25rem; }
 .mobile-drawer nav a {
   display: block;
   padding: 14px 0;
-  border-bottom: 1px solid var(--gray-100);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
   font-weight: 500;
-  color: var(--text-dark);
+  color: rgba(255,255,255,0.8);
 }
 .mobile-drawer nav a:hover {
-  color: var(--primary);
+  color: var(--gold);
 }
 .mobile-drawer .lang-switcher {
   margin-top: 20px;
