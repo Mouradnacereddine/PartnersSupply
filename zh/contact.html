@@ -14,7 +14,7 @@
   <header class="header" id="header">
     <div class="container">
       <a href="index.html" class="header-logo">
-        <img src="../images/logos/logo_partners.png" alt="Partners Supply Logo">
+        <img src="../images/logos/logo_partners.png" alt="Partners Supply Logo" loading="lazy" >
         <span>PARTNERS SUPPLY</span>
       </a>
 
@@ -82,7 +82,9 @@
       <h1>联系我们</h1>
       <p>我们的团队将在24个工作小时内回复</p>
       <div class="breadcrumb">
-        <a href="index.html">首页</a> <span>/</span> <span>联系我们</span>
+        <a href="index.html">首页</a>
+        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+        <span class="breadcrumb-current">联系我们</span>
       </div>
     </div>
   </section>
@@ -148,42 +150,42 @@
         <!-- 联系我们 Form -->
         <div>
           <h3 style="margin-bottom:20px;">给我们留言</h3>
-          <form action="https://formsubmit.co/infos@partners-supply.com" method="POST">
+          <form action="https://formsubmit.co/infos@partners-supply.com" method="POST" id="contactForm">
             <div class="form-row">
               <div class="form-group">
-                <label for="name">全名 *</label>
+                <label for="name"><i class="fas fa-user"></i> 姓名 *</label>
                 <input type="text" id="name" name="name" required placeholder="您的姓名">
               </div>
               <div class="form-group">
-                <label for="company">公司</label>
+                <label for="company"><i class="fas fa-building"></i> 公司</label>
                 <input type="text" id="company" name="company" placeholder="您的公司">
               </div>
             </div>
             <div class="form-row">
               <div class="form-group">
-                <label for="email">邮箱 *</label>
-                <input type="email" id="email" name="email" required placeholder="votre@email.com">
+                <label for="email"><i class="fas fa-envelope"></i> 邮箱 *</label>
+                <input type="email" id="email" name="email" required placeholder="your@email.com">
               </div>
               <div class="form-group">
-                <label for="phone">电话</label>
+                <label for="phone"><i class="fas fa-phone"></i> 电话</label>
                 <input type="tel" id="phone" name="phone" placeholder="+213 XX XX XX XX">
               </div>
             </div>
             <div class="form-group">
-              <label for="subject">主题</label>
+              <label for="subject"><i class="fas fa-tag"></i> 主题</label>
               <select id="subject" name="subject">
-                <option value="devis">询价</option>
-                <option value="pieces">Stellantis 配件</option>
+                <option value="devis">询价请求</option>
+                <option value="pieces">Stellantis零件</option>
                 <option value="equipements">工业设备</option>
                 <option value="minier">采矿设备</option>
-                <option value="oilgas">石油 &amp; 天然气</option>
-                <option value="logistique">物流 / 运输</option>
+                <option value="oilgas">石油天然气</option>
+                <option value="logistique">物流/运输</option>
                 <option value="autre">其他</option>
               </select>
             </div>
             <div class="form-group">
-              <label for="message">留言 *</label>
-              <textarea id="message" name="message" required placeholder="请描述您的需求..."></textarea>
+              <label for="message"><i class="fas fa-comment-dots"></i> 留言 *</label>
+              <textarea id="message" name="message" required placeholder="描述您的需求..."></textarea>
             </div>
             <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
               <i class="fas fa-paper-plane"></i> 发送消息
@@ -206,7 +208,7 @@
       <div class="footer-grid">
         <!-- Brand -->
         <div class="footer-brand">
-          <img src="../images/logos/logo_partners.png" alt="Partners Supply" style="filter:brightness(0) invert(1);height:36px;">
+          <img src="../images/logos/logo_partners.png" alt="Partners Supply" style="filter:brightness(0) invert(1);height:36px;" loading="lazy" >
           <p>专业采购公司，提供 Stellantis 配件、工业设备、采矿及石油天然气物资。总部位于巴黎 — 业务覆盖非洲、欧洲和中东。</p>
           <div class="footer-social">
             <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>

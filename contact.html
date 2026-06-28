@@ -14,7 +14,7 @@
   <header class="header" id="header">
     <div class="container">
       <a href="index.html" class="header-logo">
-        <img src="images/logos/logo_partners.png" alt="Partners Supply Logo">
+        <img src="images/logos/logo_partners.png" alt="Partners Supply Logo" loading="lazy" >
         <span>PARTNERS SUPPLY</span>
       </a>
 
@@ -82,7 +82,9 @@
       <h1>Contactez-nous</h1>
       <p>Notre équipe vous répond sous 24h ouvrées</p>
       <div class="breadcrumb">
-        <a href="index.html">Accueil</a> <span>/</span> <span>Contact</span>
+        <a href="index.html">Accueil</a>
+        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+        <span class="breadcrumb-current">Contact</span>
       </div>
     </div>
   </section>
@@ -148,29 +150,29 @@
         <!-- Contact Form -->
         <div>
           <h3 style="margin-bottom:20px;">Envoyez-nous un message</h3>
-          <form action="https://formsubmit.co/infos@partners-supply.com" method="POST">
+          <form action="https://formsubmit.co/infos@partners-supply.com" method="POST" id="contactForm">
             <div class="form-row">
               <div class="form-group">
-                <label for="name">Nom complet *</label>
+                <label for="name"><i class="fas fa-user"></i> Nom complet *</label>
                 <input type="text" id="name" name="name" required placeholder="Votre nom">
               </div>
               <div class="form-group">
-                <label for="company">Société</label>
+                <label for="company"><i class="fas fa-building"></i> Société</label>
                 <input type="text" id="company" name="company" placeholder="Votre société">
               </div>
             </div>
             <div class="form-row">
               <div class="form-group">
-                <label for="email">Email *</label>
+                <label for="email"><i class="fas fa-envelope"></i> Email *</label>
                 <input type="email" id="email" name="email" required placeholder="votre@email.com">
               </div>
               <div class="form-group">
-                <label for="phone">Téléphone</label>
+                <label for="phone"><i class="fas fa-phone"></i> Téléphone</label>
                 <input type="tel" id="phone" name="phone" placeholder="+213 XX XX XX XX">
               </div>
             </div>
             <div class="form-group">
-              <label for="subject">Sujet</label>
+              <label for="subject"><i class="fas fa-tag"></i> Sujet</label>
               <select id="subject" name="subject">
                 <option value="devis">Demande de devis</option>
                 <option value="pieces">Pièces Stellantis</option>
@@ -182,7 +184,7 @@
               </select>
             </div>
             <div class="form-group">
-              <label for="message">Message *</label>
+              <label for="message"><i class="fas fa-comment-dots"></i> Message *</label>
               <textarea id="message" name="message" required placeholder="Décrivez votre besoin..."></textarea>
             </div>
             <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
@@ -206,7 +208,7 @@
       <div class="footer-grid">
         <!-- Brand -->
         <div class="footer-brand">
-          <img src="images/logos/logo_partners.png" alt="Partners Supply" style="filter:brightness(0) invert(1);height:36px;">
+          <img src="images/logos/logo_partners.png" alt="Partners Supply" style="filter:brightness(0) invert(1);height:36px;" loading="lazy" >
           <p>Bureau d'achats spécialisé dans la fourniture de pièces Stellantis, équipements industriels, miniers et Oil &amp; Gas. Basé à Paris — Présent en Afrique, Europe et Moyen-Orient.</p>
           <div class="footer-social">
             <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
